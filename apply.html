@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Faulu Afya - Apply Now</title>
+
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
+    <meta name="viewport" content="width=device-width" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="assets/img/apple-icon.png"
+    />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+    <!--     Fonts and icons     -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
+    />
+
+    <!-- CSS Files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/material-bootstrap-wizard.css" rel="stylesheet" />
+
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="assets/css/demo.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div
+      class="image-container set-full-height"
+      style="background-image: url('img/african-fam.jpg')"
+    >
+      <!--   Creative Tim Branding   -->
+      <img
+        style="max-height: 72px;left: 50px;
+	  position: absolute;
+	  top: 15px;"
+        src="assets/img/bw.png"
+      />
+
+      <!--   Big container   -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <!--      Wizard container        -->
+            <div class="wizard-container">
+              <div class="card wizard-card" data-color="red" id="wizard">
+                <form action="" method="">
+                  <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+                  <div class="wizard-header">
+                    <h3 class="wizard-title">
+                      Apply Now
+                    </h3>
+                    <h5>This information will let us know more about you.</h5>
+                  </div>
+                  <div class="wizard-navigation">
+                    <ul>
+                      <li>
+                        <a href="#principal" data-toggle="tab">Principal</a>
+                      </li>
+                      <li><a href="#spouse" data-toggle="tab">Spouse</a></li>
+                      <li>
+                        <a href="#children" data-toggle="tab">Children</a>
+                      </li>
+                      <li><a href="#agent" data-toggle="tab">Agent</a></li>
+                      <li>
+                        <a href="#payment" data-toggle="tab">Payment</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-content">
+                    <div class="tab-pane" id="principal">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h4 class="info-text">
+                            Let's start with your basic details.
+                          </h4>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">person</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">First Name</label>
+                              <input
+                                id="principal_fname"
+                                name="principal_fname"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">person</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Last Name</label>
+                              <input
+                                id="principal_lname"
+                                name="principal_lname"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">wc</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Gender</label>
+                              <select
+                                id="principal_gender"
+                                class="form-control"
+                              >
+                                <option disabled="" selected=""></option>
+                                <option value="Male"> Male </option>
+                                <option value="Female"> Female </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">credit_card</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">ID Number</label>
+                              <input
+                                id="principal_id_no"
+                                name="principal_id_no"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">linear_scale</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">KRA Pin</label>
+                              <input
+                                id="principal_kra_pin"
+                                name="principal_kra_pin"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">event</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label"
+                                >Date of Birth (YYYY-MM-DD)</label
+                              >
+                              <input
+                                id="principal_dob"
+                                name="principal_dob"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">phone</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Phone Number</label>
+                              <input
+                                id="principal_phone"
+                                name="principal_phone"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">email</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Email Address</label>
+                              <input
+                                id="principal_email"
+                                name="principal_email"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">location_on</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Region</label>
+                              <select
+                                id="principal_region"
+                                class="form-control"
+                              >
+                                <option disabled="" selected=""></option>
+                                <option value="Nairobi"> Nairobi </option>
+                                <option value="Coast"> Coast </option>
+                                <option value="Western"> Western </option>
+                                <option value="Eastern"> Eastern </option>
+                                <option value="Nyanza"> Nyanza </option>
+                                <option value="North Eastern">
+                                  North Eastern
+                                </option>
+                                <option value="Central"> Central </option>
+                                <option value="Rift Valley">
+                                  Rift Valley
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane" id="spouse">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h4 class="info-text">
+                            Now enter your spouse details if any.
+                          </h4>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="checkbox" style="padding-left: 2rem;">
+                            <label>
+                              <input
+                                id="cb_have_spouse"
+                                type="checkbox"
+                                checked
+                                name="optionsCheckboxes"
+                              />
+                            </label>
+                            I have a spouse
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">person</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">First Name</label>
+                              <input
+                                id="spouse_fname"
+                                name="spouse_fname"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">person</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Last Name</label>
+                              <input
+                                id="spouse_lname"
+                                name="spouse_lname"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">wc</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Gender</label>
+                              <select id="spouse_gender" class="form-control">
+                                <option disabled="" selected=""></option>
+                                <option value="Male"> Male </option>
+                                <option value="Female"> Female </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">credit_card</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">ID Number</label>
+                              <input
+                                id="spouse_id_no"
+                                name="spouse_id_no"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">event</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label"
+                                >Date of Birth (YYYY-MM-DD)</label
+                              >
+                              <input
+                                id="spouse_dob"
+                                name="spouse_dob"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">phone</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Phone Number</label>
+                              <input
+                                id="spouse_phone"
+                                name="spouse_phone"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane" id="children">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h4 class="info-text">
+                            Kindly provide details of your children if any.
+                          </h4>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">child_friendly</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label"
+                                >Number of Children</label
+                              >
+                              <select id="sel_child_count" class="form-control">
+                                <option disabled="" selected=""></option>
+                                <option selected value="0"> None </option>
+                                <option value="1"> 1 </option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                                <option value="5"> 5 </option>
+                                <option value="6"> 6 </option>
+                                <option value="7"> 7 </option>
+                                <option value="8"> 8 </option>
+                                <option value="9"> 9 </option>
+                                <option value="10"> 10 </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="row_children" class="row"></div>
+                    </div>
+
+                    <div class="tab-pane" id="agent">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h4 class="info-text">
+                            To be filled by an agent only
+                          </h4>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">people</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Agent Code</label>
+                              <input
+                                id="agent_code"
+                                name="agent_code"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">person</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">First Name</label>
+                              <input
+                                id="agent_fname"
+                                name="agent_fname"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">person</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Last Name</label>
+                              <input
+                                id="agent_lname"
+                                name="agent_lname"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">wc</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Gender</label>
+                              <select id="agent_gender" class="form-control">
+                                <option disabled="" selected=""></option>
+                                <option value="Male"> Male </option>
+                                <option value="Female"> Female </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">credit_card</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">ID Number</label>
+                              <input
+                                id="agent_id_no"
+                                name="agent_id_no"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">linear_scale</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">KRA Pin</label>
+                              <input
+                                id="agent_kra_pin"
+                                name="agent_kra_pin"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">event</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label"
+                                >Date of Birth (YYYY-MM-DD)</label
+                              >
+                              <input
+                                id="agent_dob"
+                                name="agent_dob"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">phone</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Phone Number</label>
+                              <input
+                                id="agent_phone"
+                                name="agent_phone"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">email</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Email Address</label>
+                              <input
+                                id="agent_email"
+                                name="agent_email"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">location_on</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Region</label>
+                              <select id="agent_region" class="form-control">
+                                <option disabled="" selected=""></option>
+                                <option value="Nairobi"> Nairobi </option>
+                                <option value="Coast"> Coast </option>
+                                <option value="Western"> Western </option>
+                                <option value="Eastern"> Eastern </option>
+                                <option value="Nyanza"> Nyanza </option>
+                                <option value="North Eastern">
+                                  North Eastern
+                                </option>
+                                <option value="Central"> Central </option>
+                                <option value="Rift Valley">
+                                  Rift Valley
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane" id="payment">
+                      <h4 class="info-text">
+                        Select Payment Method
+                      </h4>
+                      <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1">
+                          <div class="col-sm-4">
+                            <div
+                              class="choice"
+                              id="mpesa"
+                              data-toggle="wizard-radio"
+                              rel="tooltip"
+                              title="Pay via Safaricom's M-Pesa."
+                            >
+                              <input
+                                id="mpesaPay"
+                                type="radio"
+                                name="payment"
+                                value="MPesa"
+                              />
+                              <div class="icon">
+                                <i class="material-icons">phone_android</i>
+                              </div>
+                              <h6>M-Pesa</h6>
+                            </div>
+                          </div>
+                          <div class="col-sm-4">
+                            <div
+                              id="credit-card"
+                              class="choice"
+                              data-toggle="wizard-radio"
+                              rel="tooltip"
+                              title="Pay via Credit Card."
+                            >
+                              <input
+                                type="radio"
+                                id="creditCard"
+                                name="payment"
+                                value="CreditCard"
+                              />
+                              <div class="icon">
+                                <i class="material-icons">credit_card</i>
+                              </div>
+                              <h6>Credit Card</h6>
+                            </div>
+                          </div>
+                          <div class="col-sm-4">
+                            <div
+                              id="request-loan"
+                              class="choice"
+                              data-toggle="wizard-radio"
+                              rel="tooltip"
+                              title="Select this option if you want financing from Faulu."
+                            >
+                              <input
+                                type="radio"
+                                id="requestLoan"
+                                name="payment"
+                                value="Loan"
+                              />
+                              <div class="icon">
+                                <i class="material-icons">attach_money</i>
+                              </div>
+                              <h6>Request Loan from Faulu</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        style="margin-top: 4rem;"
+                        class="row"
+                        id="pay-options"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div id="wizard-footer" class="wizard-footer">
+                    <div class="pull-right">
+                      <input
+                        type="button"
+                        class="btn btn-next btn-fill btn-danger btn-wd"
+                        name="next"
+                        value="Next"
+                      />
+                      <input
+                        type="button"
+                        class="btn btn-finish btn-fill btn-danger btn-wd"
+                        id="finish"
+                        name="finish"
+                        value="Finish"
+                      />
+                    </div>
+                    <div class="pull-left">
+                      <input
+                        type="button"
+                        class="btn btn-previous btn-fill btn-default btn-wd"
+                        name="previous"
+                        value="Previous"
+                      />
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- wizard container -->
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!--  big container -->
+
+      <div class="footer">
+        <div class="container text-center">
+          Powered by
+          <a href="https://bluewaveinsurance.co">Bluewave Insurance.</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!--   Core JS Files   -->
+  <script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="assets/js/jquery.bootstrap.js" type="text/javascript"></script>
+
+  <!--  Plugin for the Wizard -->
+  <script src="assets/js/material-bootstrap-wizard.js"></script>
+
+  <!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
+  <script src="assets/js/jquery.validate.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      checkout = function(amount, referenceId) {
+        $("#pay").prop("disabled", true);
+        $("#pay").prop("value", "Working...");
+
+        const customerMobile = $("#mpesa-no").val();
+        $.ajax({
+          url: "http://localhost:5000/api/mpesa/c2b/checkout",
+          dataType: "json",
+          type: "post",
+          contentType: "application/json",
+          data: JSON.stringify({
+            amount,
+            customerMobile,
+            referenceId
+          }),
+          processData: false,
+          success: function(resp, textStatus, jQxhr) {
+            console.log(resp);
+            $("#pay").prop("disabled", false);
+            $("#pay").prop("value", "Pay");
+          },
+          error: function(jqXhr, textStatus, errorThrown) {
+            console.log(errorThrown);
+            $("#pay").prop("disabled", false);
+            $("#pay").prop("value", "Pay");
+          }
+        });
+      };
+
+      $("#mpesa").click(function() {
+        $("#pay-options").html("<p></p>");
+      });
+
+      $("#credit-card").click(function() {
+        $("#pay-options").html("<p></p>");
+      });
+
+      $("#request-loan").click(function() {
+        $("#pay-options").html("<p></p>");
+      });
+
+      $("#finish").click(function() {
+        $("#finish").prop("disabled", true);
+        $("#finish").prop("value", "Saving...");
+
+        const agentCode = $("#agent_code").val();
+        const numberOfChildren = parseInt($("#sel_child_count").val());
+        const children = [];
+
+        for (var i = 0; i < numberOfChildren; i++) {
+          children.push({
+            firstName: $("#child_" + (i + 1) + "_fname").val(),
+            lastName: $("#child_" + (i + 1) + "_lname").val(),
+            dateOfBirth: $("#child_" + (i + 1) + "_dob").val(),
+            gender: $("#child_" + (i + 1) + "_gender").val(),
+            relationshipType: "CHILD",
+            agentCode
+          });
+        }
+
+        const body = {
+          principal: {
+            mobileNumber: $("#principal_phone").val(),
+            firstName: $("#principal_fname").val(),
+            lastName: $("#principal_lname").val(),
+            dateOfBirth: $("#principal_dob").val(),
+            gender: $("#principal_gender").val(),
+            kraPinNo: $("#principal_kra_pin").val(),
+            idType: "NATIONAL_ID",
+            idNumber: $("#principal_id_no").val(),
+            password: "",
+            city: "",
+            email: $("#principal_email").val(),
+            region: $("#principal_region").val(),
+            spousePresent: $("#cb_have_spouse").is(":checked"),
+            numberOfChildren,
+            selectedCoverPlan: "COMPREHENSIVE",
+            agentCode
+          },
+          children,
+          agent: {
+            agentCode,
+            mobileNumber: $("#agent_phone").val(),
+            firstName: $("#agent_fname").val(),
+            lastName: $("#agent_lname").val(),
+            dateOfBirth: $("#agent_dob").val(),
+            gender: $("#agent_gender").val(),
+            kraPinNo: $("#agent_kra_pin").val(),
+            idNumber: $("#agent_id_no").val(),
+            email: $("#agent_email").val(),
+            region: $("#agent_region").val()
+          },
+          requestedForFinance: $("#requestLoan").attr("checked") === "checked"
+        };
+
+        if (body.principal.spousePresent) {
+          body.spouse = {
+            mobileNumber: $("#spouse_phone").val(),
+            firstName: $("#spouse_fname").val(),
+            lastName: $("#spouse_lname").val(),
+            dateOfBirth: $("#spouse_dob").val(),
+            gender: $("#spouse_gender").val(),
+            idType: "NATIONAL_ID",
+            idNumber: $("#spouse_id_no").val(),
+            relationshipType: "SPOUSE",
+            agentCode
+          };
+        }
+
+        $.ajax({
+          url: "http://localhost:5000/api/policy-holders/web-enrol",
+          dataType: "json",
+          type: "post",
+          contentType: "application/json",
+          data: JSON.stringify(body),
+          processData: false,
+          success: function(ph, textStatus, jQxhr) {
+            $("#wizard-footer").remove();
+            if ($("#mpesaPay").attr("checked") === "checked") {
+              var policyAmount = 20000;
+              const extraMembers = ph.dependents.length + 1 - 5;
+              if (extraMembers > 0) {
+                policyAmount += extraMembers * 6000;
+              }
+
+              policyAmount = 1;
+
+              $("#pay-options").html(
+                `
+                  <div class="col-sm-5 text-right">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="material-icons">phone_android</i>
+                      </span>
+                      <div class="form-group label-floating">
+                        <label class="control-label"
+                          >M-Pesa Number for Payment</label
+                        >
+                        <input
+                          id="mpesa-no"
+                          name="mpesa-no"
+                          type="text"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                    <div class="pull-right">
+                      <input
+                        id="pay"
+                        type="button"
+                        class="btn btn-success"
+                        onclick="checkout('${policyAmount}', '${
+                  ph.policyNumber
+                }')"
+                        name="pay"
+                        value="Pay"
+                      />
+                      </div>
+                  </div>
+                  <div class="col-sm-2 text-center">
+                    <div class="input-group">
+                      <span class="input-group-addon"> </span>
+                      <div class="form-group label-floating">
+                        <p>OR</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-5 text-left">
+                    <div class="input-group">
+                      <span class="input-group-addon"> </span>
+                      <div class="form-group label-floating">
+                        <h4>Pay via Lipa Na M-Pesa to:</h4>
+                        <p>Paybill: <b>831583</b></p>
+                        <p>Account: <b>${ph.policyNumber}</b></p>
+                        <p>Amount: <b>KES ${policyAmount.toLocaleString()}</b></p>
+                      </div>
+                    </div>
+                  </div>
+                `
+              );
+            }
+          },
+          error: function(jqXhr, textStatus, errorThrown) {
+            console.log(errorThrown);
+            $("#finish").prop("disabled", false);
+            $("#finish").prop("value", "Finish");
+            alert("Error saving data! Date of birth format must be YYYY-MM-DD");
+          }
+        });
+      });
+
+      $("#cb_have_spouse").change(function() {
+        $("#spouse :text").attr("disabled", !this.checked);
+      });
+
+      $("#sel_child_count").on("change", function() {
+        var html = "";
+        for (var i = 0; i < this.value; i++) {
+          html += `
+          <div style="margin: 2rem;font-size:1.3rem;color:#0073bd;font-weight:250" class="col-sm-12">
+              <p>Child #${i + 1}:</p>
+            </div>
+            <div class="col-sm-6">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="material-icons">person</i>
+                </span>
+                <div class="form-group label-floating">
+                  <label class="control-label">First Name</label>
+                  <input
+                    id="child_${i + 1}_fname"
+                    name="child_${i + 1}_fname"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="material-icons">person</i>
+                  </span>
+                  <div class="form-group label-floating">
+                    <label class="control-label">Last Name</label>
+                    <input
+                      id="child_${i + 1}_lname"
+                      name="child_${i + 1}_lname"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+                      
+            <div class="col-sm-6">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="material-icons">wc</i>
+                </span>
+                <div class="form-group label-floating">
+                  <label class="control-label">Gender</label>
+                  <select id="child_${i + 1}_gender" class="form-control">
+                    <option disabled="" selected=""></option>
+                    <option value="Male"> Male </option>
+                    <option value="Female"> Female </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="material-icons">event</i>
+                </span>
+                <div class="form-group label-floating">
+                  <label class="control-label">Date of Birth (YYYY-MM-DD)</label>
+                  <input
+                    id="child_${i + 1}_dob"
+                    name="child_${i + 1}_dob"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+          `;
+        }
+        html += "</p>";
+        $("#row_children").html(html);
+      });
+    });
+  </script>
+</html>
