@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Faulu Afya - Apply Now</title>
+    <title>Imarisha Afya - Apply Now</title>
 
     <meta
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
@@ -165,7 +165,7 @@
                       </div>
 
                       <div class="row">
-                        <div class="col-sm-6">
+                        <!-- <div class="col-sm-6">
                           <div class="input-group">
                             <span class="input-group-addon">
                               <i class="material-icons">linear_scale</i>
@@ -180,7 +180,7 @@
                               />
                             </div>
                           </div>
-                        </div>
+                        </div> -->
                         <div class="col-sm-6">
                           <div class="input-group">
                             <span class="input-group-addon">
@@ -199,9 +199,6 @@
                             </div>
                           </div>
                         </div>
-                      </div>
-
-                      <div class="row">
                         <div class="col-sm-6">
                           <div class="input-group">
                             <span class="input-group-addon">
@@ -218,7 +215,10 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-sm-6">
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-12">
                           <div class="input-group">
                             <span class="input-group-addon">
                               <i class="material-icons">email</i>
@@ -517,7 +517,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-sm-6">
+                        <!-- <div class="col-sm-6">
                           <div class="input-group">
                             <span class="input-group-addon">
                               <i class="material-icons">linear_scale</i>
@@ -532,7 +532,7 @@
                               />
                             </div>
                           </div>
-                        </div>
+                        </div> -->
                         <div class="col-sm-6">
                           <div class="input-group">
                             <span class="input-group-addon">
@@ -567,7 +567,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-12">
                           <div class="input-group">
                             <span class="input-group-addon">
                               <i class="material-icons">email</i>
@@ -663,7 +663,7 @@
                               class="choice"
                               data-toggle="wizard-radio"
                               rel="tooltip"
-                              title="Select this option if you want financing from Faulu."
+                              title="Select this option if you want financing from Imarisha."
                             >
                               <input
                                 type="radio"
@@ -674,7 +674,7 @@
                               <div class="icon">
                                 <i class="material-icons">attach_money</i>
                               </div>
-                              <h6>Request Loan from Faulu</h6>
+                              <h6>Request Loan from Imarisha</h6>
                             </div>
                           </div>
                         </div>
@@ -750,7 +750,8 @@
 
         const customerMobile = $("#mpesa-no").val();
         $.ajax({
-          url: "http://localhost:5000/api/mpesa/c2b/checkout",
+          url:
+            "https://imarishaafya.bluewaveinsurance.co/api/mpesa/c2b/checkout",
           dataType: "json",
           type: "post",
           contentType: "application/json",
@@ -764,6 +765,7 @@
             console.log(resp);
             $("#pay").prop("disabled", false);
             $("#pay").prop("value", "Pay");
+            location.reload();
           },
           error: function(jqXhr, textStatus, errorThrown) {
             console.log(errorThrown);
@@ -811,7 +813,7 @@
             lastName: $("#principal_lname").val(),
             dateOfBirth: $("#principal_dob").val(),
             gender: $("#principal_gender").val(),
-            kraPinNo: $("#principal_kra_pin").val(),
+            kraPinNo: "", //$("#principal_kra_pin").val(),
             idType: "NATIONAL_ID",
             idNumber: $("#principal_id_no").val(),
             password: "",
@@ -831,7 +833,7 @@
             lastName: $("#agent_lname").val(),
             dateOfBirth: $("#agent_dob").val(),
             gender: $("#agent_gender").val(),
-            kraPinNo: $("#agent_kra_pin").val(),
+            kraPinNo: "", //$("#agent_kra_pin").val(),
             idNumber: $("#agent_id_no").val(),
             email: $("#agent_email").val(),
             region: $("#agent_region").val()
@@ -854,7 +856,8 @@
         }
 
         $.ajax({
-          url: "http://localhost:5000/api/policy-holders/web-enrol",
+          url:
+            "https://imarishaafya.bluewaveinsurance.co/api/policy-holders/web-enrol",
           dataType: "json",
           type: "post",
           contentType: "application/json",
@@ -924,6 +927,9 @@
                   </div>
                 `
               );
+            } else {
+              //reload form
+              location.reload();
             }
           },
           error: function(jqXhr, textStatus, errorThrown) {
