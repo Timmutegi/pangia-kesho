@@ -35,6 +35,49 @@
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="assets/css/demo.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"
+    />
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1279808078850747");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        src="https://www.facebook.com/tr?id=1279808078850747&ev=PageView
+      &noscript=1"
+      />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
   </head>
 
   <body>
@@ -42,13 +85,14 @@
       class="image-container set-full-height"
       style="background-image: url('img/african-fam.jpg')"
     >
-      <!--   Creative Tim Branding   -->
-      <img
-        style="max-height: 72px;left: 50px;
-	  position: absolute;
-	  top: 15px;"
-        src="assets/img/bw.png"
-      />
+      <a href="./index.html">
+        <img
+          style="max-height: 72px;left: 50px;
+  position: absolute;
+  top: 15px;"
+          src="assets/img/bw.png"
+        />
+      </a>
 
       <!--   Big container   -->
       <div class="container">
@@ -77,8 +121,11 @@
                       </li>
                       <li><a href="#agent" data-toggle="tab">Agent</a></li>
                       <li>
-                        <a href="#payment" data-toggle="tab">Payment</a>
+                        <a href="#cover" data-toggle="tab">Cover Option</a>
                       </li>
+                      <!-- <li>
+                        <a href="#payment" data-toggle="tab">Payment</a>
+                      </li> -->
                     </ul>
                   </div>
 
@@ -187,14 +234,15 @@
                               <i class="material-icons">event</i>
                             </span>
                             <div class="form-group label-floating">
-                              <label class="control-label"
-                                >Date of Birth (YYYY-MM-DD)</label
+                              <label class="control-label" for="date"
+                                >Date of Birth</label
                               >
                               <input
-                                id="principal_dob"
-                                name="principal_dob"
-                                type="text"
                                 class="form-control"
+                                id="principal_dob"
+                                name="date"
+                                placeholder="Date of Birth"
+                                type="text"
                               />
                             </div>
                           </div>
@@ -363,14 +411,15 @@
                               <i class="material-icons">event</i>
                             </span>
                             <div class="form-group label-floating">
-                              <label class="control-label"
-                                >Date of Birth (YYYY-MM-DD)</label
+                              <label class="control-label" for="date"
+                                >Date of Birth</label
                               >
                               <input
-                                id="spouse_dob"
-                                name="spouse_dob"
-                                type="text"
                                 class="form-control"
+                                id="spouse_dob"
+                                name="date"
+                                placeholder="Date of Birth"
+                                type="text"
                               />
                             </div>
                           </div>
@@ -434,9 +483,21 @@
                     <div class="tab-pane" id="agent">
                       <div class="row">
                         <div class="col-sm-12">
-                          <h4 class="info-text">
-                            To be filled by an agent only
+                          <h4 style="color: red;" class="info-text">
+                            ** Skip this section if you are not an agent **
                           </h4>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="checkbox" style="padding-left: 2rem;">
+                            <label>
+                              <input
+                                id="cb_am_an_agent"
+                                type="checkbox"
+                                name="optionsCheckboxes"
+                              />
+                            </label>
+                            I am an Agent
+                          </div>
                         </div>
                         <div class="col-sm-12">
                           <div class="input-group">
@@ -517,34 +578,16 @@
                             </div>
                           </div>
                         </div>
-                        <!-- <div class="col-sm-6">
-                          <div class="input-group">
-                            <span class="input-group-addon">
-                              <i class="material-icons">linear_scale</i>
-                            </span>
-                            <div class="form-group label-floating">
-                              <label class="control-label">KRA Pin</label>
-                              <input
-                                id="agent_kra_pin"
-                                name="agent_kra_pin"
-                                type="text"
-                                class="form-control"
-                              />
-                            </div>
-                          </div>
-                        </div> -->
                         <div class="col-sm-6">
                           <div class="input-group">
                             <span class="input-group-addon">
-                              <i class="material-icons">event</i>
+                              <i class="material-icons">email</i>
                             </span>
                             <div class="form-group label-floating">
-                              <label class="control-label"
-                                >Date of Birth (YYYY-MM-DD)</label
-                              >
+                              <label class="control-label">Email Address</label>
                               <input
-                                id="agent_dob"
-                                name="agent_dob"
+                                id="agent_email"
+                                name="agent_email"
                                 type="text"
                                 class="form-control"
                               />
@@ -561,22 +604,6 @@
                               <input
                                 id="agent_phone"
                                 name="agent_phone"
-                                type="text"
-                                class="form-control"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-sm-12">
-                          <div class="input-group">
-                            <span class="input-group-addon">
-                              <i class="material-icons">email</i>
-                            </span>
-                            <div class="form-group label-floating">
-                              <label class="control-label">Email Address</label>
-                              <input
-                                id="agent_email"
-                                name="agent_email"
                                 type="text"
                                 class="form-control"
                               />
@@ -611,12 +638,66 @@
                       </div>
                     </div>
 
+                    <div class="tab-pane" id="cover">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h4 class="info-text">
+                            Select Cover Option
+                          </h4>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">list</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Cover Options</label>
+                              <select id="cover_options" class="form-control">
+                                <option selected value="COMPREHENSIVE">
+                                  Inpatient and Outpatient
+                                </option>
+                                <option value="OUTPATIENT">
+                                  Outpatient Only
+                                </option>
+                              </select>
+                              <div style="margin-top: 1rem;" id="cover-result">
+                                KES 20,000 per year for a family of 5 or
+                                less.<br />
+                                Additional member (6th or more) KES 6,000 each
+                                per year
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                     <div class="tab-pane" id="payment">
                       <h4 class="info-text">
-                        Select Payment Method
+                        Please select an option
                       </h4>
                       <div class="row">
                         <div class="col-sm-10 col-sm-offset-1">
+                          <div class="col-sm-4">
+                            <div
+                              class="choice"
+                              id="pay-later"
+                              data-toggle="wizard-radio"
+                              rel="tooltip"
+                              title="Select this option to complete application and pay later"
+                            >
+                              <input
+                                id="payLater"
+                                type="radio"
+                                name="payLater"
+                                value="Pay Later"
+                              />
+                              <div class="icon">
+                                <i class="material-icons">watch_later</i>
+                              </div>
+                              <h6>Pay Later</h6>
+                            </div>
+                          </div>
                           <div class="col-sm-4">
                             <div
                               class="choice"
@@ -634,10 +715,10 @@
                               <div class="icon">
                                 <i class="material-icons">phone_android</i>
                               </div>
-                              <h6>M-Pesa</h6>
+                              <h6>Pay now via M-Pesa</h6>
                             </div>
                           </div>
-                          <div class="col-sm-4">
+                          <!-- <div class="col-sm-4">
                             <div
                               id="credit-card"
                               class="choice"
@@ -656,7 +737,7 @@
                               </div>
                               <h6>Credit Card</h6>
                             </div>
-                          </div>
+                          </div> -->
                           <div class="col-sm-4">
                             <div
                               id="request-loan"
@@ -726,156 +807,186 @@
       <div class="footer">
         <div class="container text-center">
           Powered by
-          <a href="https://bluewaveinsurance.co">Bluewave Insurance.</a>
+          <a href="https://bluewaveinsurance.co">Bluewave</a> in partnership
+          with <a href="https://kenbright.co.ke">Kenbright</a>
         </div>
       </div>
     </div>
-  </body>
-  <!--   Core JS Files   -->
-  <script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
-  <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-  <script src="assets/js/jquery.bootstrap.js" type="text/javascript"></script>
 
-  <!--  Plugin for the Wizard -->
-  <script src="assets/js/material-bootstrap-wizard.js"></script>
+    <!--   Core JS Files   -->
+    <script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.bootstrap.js" type="text/javascript"></script>
 
-  <!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
-  <script src="assets/js/jquery.validate.min.js"></script>
+    <!--  Plugin for the Wizard -->
+    <script src="assets/js/material-bootstrap-wizard.js"></script>
 
-  <script>
-    $(document).ready(function() {
-      checkout = function(amount, referenceId) {
-        $("#pay").prop("disabled", true);
-        $("#pay").prop("value", "Working...");
+    <!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
+    <script src="assets/js/jquery.validate.min.js"></script>
 
-        const customerMobile = $("#mpesa-no").val();
-        $.ajax({
-          url:
-            "https://imarishaafya.bluewaveinsurance.co/api/mpesa/c2b/checkout",
-          dataType: "json",
-          type: "post",
-          contentType: "application/json",
-          data: JSON.stringify({
-            amount,
-            customerMobile,
-            referenceId
-          }),
-          processData: false,
-          success: function(resp, textStatus, jQxhr) {
-            console.log(resp);
-            $("#pay").prop("disabled", false);
-            $("#pay").prop("value", "Pay");
-            location.reload();
-          },
-          error: function(jqXhr, textStatus, errorThrown) {
-            console.log(errorThrown);
-            $("#pay").prop("disabled", false);
-            $("#pay").prop("value", "Pay");
-          }
-        });
-      };
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"
+    ></script>
 
-      $("#mpesa").click(function() {
-        $("#pay-options").html("<p></p>");
-      });
+    <script>
+      $(document).ready(function() {
+        $("#agent :text").attr("disabled", !this.checked);
+        $("#agent select").attr("disabled", !this.checked);
 
-      $("#credit-card").click(function() {
-        $("#pay-options").html("<p></p>");
-      });
-
-      $("#request-loan").click(function() {
-        $("#pay-options").html("<p></p>");
-      });
-
-      $("#finish").click(function() {
-        $("#finish").prop("disabled", true);
-        $("#finish").prop("value", "Saving...");
-
-        const agentCode = $("#agent_code").val();
-        const numberOfChildren = parseInt($("#sel_child_count").val());
-        const children = [];
-
-        for (var i = 0; i < numberOfChildren; i++) {
-          children.push({
-            firstName: $("#child_" + (i + 1) + "_fname").val(),
-            lastName: $("#child_" + (i + 1) + "_lname").val(),
-            dateOfBirth: $("#child_" + (i + 1) + "_dob").val(),
-            gender: $("#child_" + (i + 1) + "_gender").val(),
-            relationshipType: "CHILD",
-            agentCode
-          });
-        }
-
-        const body = {
-          principal: {
-            mobileNumber: $("#principal_phone").val(),
-            firstName: $("#principal_fname").val(),
-            lastName: $("#principal_lname").val(),
-            dateOfBirth: $("#principal_dob").val(),
-            gender: $("#principal_gender").val(),
-            kraPinNo: "", //$("#principal_kra_pin").val(),
-            idType: "NATIONAL_ID",
-            idNumber: $("#principal_id_no").val(),
-            password: "",
-            city: "",
-            email: $("#principal_email").val(),
-            region: $("#principal_region").val(),
-            spousePresent: $("#cb_have_spouse").is(":checked"),
-            numberOfChildren,
-            selectedCoverPlan: "COMPREHENSIVE",
-            agentCode
-          },
-          children,
-          agent: {
-            agentCode,
-            mobileNumber: $("#agent_phone").val(),
-            firstName: $("#agent_fname").val(),
-            lastName: $("#agent_lname").val(),
-            dateOfBirth: $("#agent_dob").val(),
-            gender: $("#agent_gender").val(),
-            kraPinNo: "", //$("#agent_kra_pin").val(),
-            idNumber: $("#agent_id_no").val(),
-            email: $("#agent_email").val(),
-            region: $("#agent_region").val()
-          },
-          requestedForFinance: $("#requestLoan").attr("checked") === "checked"
+        setUpDatePicker = function() {
+          var date_input = $('input[name="date"]'); //our date input has the name "date"
+          var container =
+            $(".bootstrap-iso form").length > 0
+              ? $(".bootstrap-iso form").parent()
+              : "body";
+          var options = {
+            format: "yyyy-mm-dd",
+            container: container,
+            todayHighlight: true,
+            autoclose: true
+          };
+          date_input.datepicker(options);
         };
 
-        if (body.principal.spousePresent) {
-          body.spouse = {
-            mobileNumber: $("#spouse_phone").val(),
-            firstName: $("#spouse_fname").val(),
-            lastName: $("#spouse_lname").val(),
-            dateOfBirth: $("#spouse_dob").val(),
-            gender: $("#spouse_gender").val(),
-            idType: "NATIONAL_ID",
-            idNumber: $("#spouse_id_no").val(),
-            relationshipType: "SPOUSE",
-            agentCode
+        checkout = function(amount, referenceId) {
+          fbq("track", "InitiateMpesaCheckout");
+
+          $("#pay").prop("disabled", true);
+          $("#pay").prop("value", "Working...");
+
+          const customerMobile = $("#mpesa-no").val();
+          $.ajax({
+            url:
+              "https://imarishaafya.bluewaveinsurance.co/api/mpesa/c2b/checkout",
+            dataType: "json",
+            type: "post",
+            contentType: "application/json",
+            data: JSON.stringify({
+              amount,
+              customerMobile,
+              referenceId
+            }),
+            processData: false,
+            success: function(resp, textStatus, jQxhr) {
+              console.log(resp);
+              $("#pay").prop("disabled", false);
+              $("#pay").prop("value", "Pay");
+              location.reload();
+            },
+            error: function(jqXhr, textStatus, errorThrown) {
+              console.log(errorThrown);
+              $("#pay").prop("disabled", false);
+              $("#pay").prop("value", "Pay");
+            }
+          });
+        };
+
+        $("#mpesa").click(function() {
+          $("#pay-options").html("<p></p>");
+        });
+
+        $("#credit-card").click(function() {
+          $("#pay-options").html("<p></p>");
+        });
+
+        $("#request-loan").click(function() {
+          $("#pay-options").html("<p></p>");
+        });
+
+        $("#finish").click(function() {
+          fbq("track", "SubmitApplication");
+
+          $("#finish").prop("disabled", true);
+          $("#finish").prop("value", "Saving...");
+
+          const agentCode = $("#agent_code").val();
+          const numberOfChildren = parseInt($("#sel_child_count").val());
+          const children = [];
+
+          for (var i = 0; i < numberOfChildren; i++) {
+            children.push({
+              firstName: $("#child_" + (i + 1) + "_fname").val(),
+              lastName: $("#child_" + (i + 1) + "_lname").val(),
+              dateOfBirth: $("#child_" + (i + 1) + "_dob").val(),
+              gender: $("#child_" + (i + 1) + "_gender").val(),
+              relationshipType: "CHILD",
+              agentCode
+            });
+          }
+
+          const body = {
+            principal: {
+              mobileNumber: $("#principal_phone").val(),
+              firstName: $("#principal_fname").val(),
+              lastName: $("#principal_lname").val(),
+              dateOfBirth: $("#principal_dob").val(),
+              gender: $("#principal_gender").val(),
+              kraPinNo: "", //$("#principal_kra_pin").val(),
+              idType: "NATIONAL_ID",
+              idNumber: $("#principal_id_no").val(),
+              password: "",
+              city: "",
+              email: $("#principal_email").val(),
+              region: $("#principal_region").val(),
+              spousePresent: $("#cb_have_spouse").is(":checked"),
+              numberOfChildren,
+              selectedCoverPlan: $("#cover_options").val(),
+              agentCode
+            },
+            children,
+            agent: {
+              agentCode,
+              mobileNumber: $("#agent_phone").val(),
+              firstName: $("#agent_fname").val(),
+              lastName: $("#agent_lname").val(),
+              dateOfBirth: null, // $("#agent_dob").val(),
+              gender: $("#agent_gender").val(),
+              kraPinNo: "", //$("#agent_kra_pin").val(),
+              idNumber: $("#agent_id_no").val(),
+              email: $("#agent_email").val(),
+              region: $("#agent_region").val()
+            },
+            requestedForFinance: $("#requestLoan").attr("checked") === "checked"
           };
-        }
 
-        $.ajax({
-          url:
-            "https://imarishaafya.bluewaveinsurance.co/api/policy-holders/web-enrol",
-          dataType: "json",
-          type: "post",
-          contentType: "application/json",
-          data: JSON.stringify(body),
-          processData: false,
-          success: function(ph, textStatus, jQxhr) {
-            $("#wizard-footer").remove();
-            if ($("#mpesaPay").attr("checked") === "checked") {
-              var policyAmount = 20000;
-              const extraMembers = ph.dependents.length + 1 - 5;
-              if (extraMembers > 0) {
-                policyAmount += extraMembers * 6000;
-              }
+          if (body.principal.spousePresent) {
+            body.spouse = {
+              mobileNumber: $("#spouse_phone").val(),
+              firstName: $("#spouse_fname").val(),
+              lastName: $("#spouse_lname").val(),
+              dateOfBirth: $("#spouse_dob").val(),
+              gender: $("#spouse_gender").val(),
+              idType: "NATIONAL_ID",
+              idNumber: $("#spouse_id_no").val(),
+              relationshipType: "SPOUSE",
+              agentCode
+            };
+          }
 
-              policyAmount = 1;
+          $.ajax({
+            url:
+              "https://imarishaafya.bluewaveinsurance.co/api/policy-holders/web-enrol",
+            dataType: "json",
+            type: "post",
+            contentType: "application/json",
+            data: JSON.stringify(body),
+            processData: false,
+            success: function(ph, textStatus, jQxhr) {
+              $("#wizard-footer").remove();
+              if ($("#mpesaPay").attr("checked") === "checked") {
+                var policyAmount =
+                  body.principal.selectedCoverPlan === "COMPREHENSIVE"
+                    ? 20000
+                    : 15000;
+                const extraMembers = ph.dependents.length + 1 - 5;
+                if (extraMembers > 0) {
+                  policyAmount += extraMembers * 6000;
+                }
 
-              $("#pay-options").html(
-                `
+                $("#pay-options").html(
+                  `
                   <div class="col-sm-5 text-right">
                     <div class="input-group">
                       <span class="input-group-addon">
@@ -899,8 +1010,8 @@
                         type="button"
                         class="btn btn-success"
                         onclick="checkout('${policyAmount}', '${
-                  ph.policyNumber
-                }')"
+                    ph.policyNumber
+                  }')"
                         name="pay"
                         value="Pay"
                       />
@@ -926,29 +1037,55 @@
                     </div>
                   </div>
                 `
-              );
-            } else {
-              //reload form
-              location.reload();
+                );
+              } else {
+                //reload form
+                location.reload();
+              }
+            },
+            error: function(jqXhr, textStatus, errorThrown) {
+              $("#finish").prop("disabled", false);
+              $("#finish").prop("value", "Finish");
+              console.log(jqXhr);
+              const errorMsg =
+                (jqXhr.responseJSON && jqXhr.responseJSON.message) ||
+                "Error: Unable to complete enrolment";
+              alert(errorMsg);
             }
-          },
-          error: function(jqXhr, textStatus, errorThrown) {
-            console.log(errorThrown);
-            $("#finish").prop("disabled", false);
-            $("#finish").prop("value", "Finish");
-            alert("Error saving data! Date of birth format must be YYYY-MM-DD");
+          });
+        });
+
+        $("#cover_options").change(function() {
+          const option = $("#cover_options").val();
+          if (option === "COMPREHENSIVE") {
+            fbq("track", "SelectInpatientAndOutpatient");
+
+            $("#cover-result").html(
+              "KES 20,000 per year for a family of 5 or less.<br />Additional member (6th or more) KES 6,000 each per year"
+            );
+          } else {
+            fbq("track", "SelectOutpatientOnly");
+
+            $("#cover-result").html(
+              "KES 15,000 per year for a family of 5 or less.<br />Additional member (6th or more) KES 6,000 each per year"
+            );
           }
         });
-      });
 
-      $("#cb_have_spouse").change(function() {
-        $("#spouse :text").attr("disabled", !this.checked);
-      });
+        $("#cb_have_spouse").change(function() {
+          $("#spouse :text").attr("disabled", !this.checked);
+          $("#spouse select").attr("disabled", !this.checked);
+        });
 
-      $("#sel_child_count").on("change", function() {
-        var html = "";
-        for (var i = 0; i < this.value; i++) {
-          html += `
+        $("#cb_am_an_agent").change(function() {
+          $("#agent :text").attr("disabled", !this.checked);
+          $("#agent select").attr("disabled", !this.checked);
+        });
+
+        $("#sel_child_count").on("change", function() {
+          var html = "";
+          for (var i = 0; i < this.value; i++) {
+            html += `
           <div style="margin: 2rem;font-size:1.3rem;color:#0073bd;font-weight:250" class="col-sm-12">
               <p>Child #${i + 1}:</p>
             </div>
@@ -1009,21 +1146,42 @@
                   <i class="material-icons">event</i>
                 </span>
                 <div class="form-group label-floating">
-                  <label class="control-label">Date of Birth (YYYY-MM-DD)</label>
+                  <label class="control-label" for="date">Date of Birth</label>
                   <input
-                    id="child_${i + 1}_dob"
-                    name="child_${i + 1}_dob"
-                    type="text"
                     class="form-control"
+                    id="child_${i + 1}_dob"
+                    name="date"
+                    placeholder="Date of Birth"
+                    type="text"
                   />
                 </div>
               </div>
             </div>
           `;
-        }
-        html += "</p>";
-        $("#row_children").html(html);
+          }
+          html += "</p>";
+          $("#row_children").html(html);
+          setUpDatePicker();
+        });
+
+        setUpDatePicker();
       });
-    });
-  </script>
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function() {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/5df9dfe243be710e1d229781/default";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+  </body>
 </html>
