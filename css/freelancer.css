@@ -4258,6 +4258,10 @@ input[type="button"].btn-block {
     white-space: nowrap;
 }
 
+.navbar-brand img {
+    width: 150px;
+}
+
 .navbar-brand:hover,
 .navbar-brand:focus {
     text-decoration: none;
@@ -6554,7 +6558,7 @@ a.close.disabled {
 }
 
 .bg-primary2 {
-    background-image: url("../img/african-family.jpg") !important;
+    background-image: url("../img/africanChurch.jpg") !important;
     background-color: #5c4c4c;
     /* Used if the image is unavailable */
     height: 100%;
@@ -10159,7 +10163,7 @@ table,
 th,
 td {
     border: 2px solid white;
-    color: white;
+    color: black;
     font-size: 13px;
 }
 
