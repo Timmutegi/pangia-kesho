@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Pangia Kesho - Apply Now</title>
 
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="assets/img/apple-icon.png"
+    />
     <link rel="icon" type="image/png" href="assets/img/bw.png" />
 
     <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
+    />
 
     <!-- CSS Files -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -23,35 +36,38 @@
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="assets/css/demo.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"
+    />
 
     <!-- Facebook Pixel Code -->
     <script>
-        !(function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) :
-                    n.queue.push(arguments);
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = "2.0";
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s);
-        })(
-            window,
-            document,
-            "script",
-            "https://connect.facebook.net/en_US/fbevents.js"
-        );
-        fbq("init", "1279808078850747");
-        fbq("track", "PageView");
+      !(function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1279808078850747");
+      fbq("track", "PageView");
     </script>
     <noscript>
       <img
@@ -62,70 +78,76 @@
       />
     </noscript>
     <!-- End Facebook Pixel Code -->
-</head>
+  </head>
 
-<body>
-    <div class="image-container set-full-height" style="background-image: url('img/african-fam.jpg')">
-        <a href="./index.html">
-            <img style="max-height: 72px;left: 50px;
+  <body>
+    <div
+      class="image-container set-full-height"
+      style="background-image: url('img/african-fam.jpg')"
+    >
+      <a href="./index.html">
+        <img
+          style="max-height: 72px;left: 50px;
               position: absolute;
-              top: 15px;" src="assets/img/bw.png" />
-        </a>
+              top: 15px;"
+          src="assets/img/bw.png"
+        />
+      </a>
 
-        <!--   Big container   -->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <!--      Wizard container        -->
-                    <div class="wizard-container">
-                        <div class="card wizard-card" data-color="red" id="wizard">
-                            <form action="" method="">
-                                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+      <!--   Big container   -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <!--      Wizard container        -->
+            <div class="wizard-container">
+              <div class="card wizard-card" data-color="red" id="wizard">
+                <form action="" method="">
+                  <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
 
-                                <div class="wizard-header">
-                                    <h3 class="wizard-title">
-                                        Apply Now
-                                    </h3>
-                                    <h5>This information will let us know more about you.</h5>
-                                </div>
-                                <div class="wizard-navigation">
-                                    <ul>
-                                        <li>
-                                            <a href="#principal" data-toggle="tab">Principal</a>
-                                        </li>
-                                        <li><a href="#spouse" data-toggle="tab">Spouse</a></li>
-                                        <li>
-                                            <a href="#children" data-toggle="tab">Children</a>
-                                        </li>
-                                        <li><a href="#kin" data-toggle="tab">Next of kin</a></li>
-                                        <li>
-                                            <a href="#cover" data-toggle="tab">Cover Option</a>
-                                        </li>
-                                        <li>
-                                            <a href="#payment" data-toggle="tab">Payment</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                  <div class="wizard-header">
+                    <h3 class="wizard-title">
+                      Apply Now
+                    </h3>
+                    <h5>This information will let us know more about you.</h5>
+                  </div>
+                  <div class="wizard-navigation">
+                    <ul>
+                      <li>
+                        <a href="#principal" data-toggle="tab">Principal</a>
+                      </li>
+                      <li><a href="#spouse" data-toggle="tab">Spouse</a></li>
+                      <li>
+                        <a href="#children" data-toggle="tab">Children</a>
+                      </li>
+                      <li><a href="#kin" data-toggle="tab">Next of kin</a></li>
+                      <li>
+                        <a href="#cover" data-toggle="tab">Cover Option</a>
+                      </li>
+                      <li>
+                        <a href="#payment" data-toggle="tab">Payment</a>
+                      </li>
+                    </ul>
+                  </div>
 
-                                <div class="tab-content">
-                                    <div class="tab-pane" id="principal">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <h4 class="info-text">
-                                                    Let's start with your basic details.
-                                                </h4>
-                                            </div>
-                                        </div>
+                  <div class="tab-content">
+                    <div class="tab-pane" id="principal">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h4 class="info-text">
+                            Let's start with your basic details.
+                          </h4>
+                        </div>
+                      </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">roofing</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Church</label>
-                                                        <select id="principal_church" class="form-control">
+                            <div class="form-group label-floating">
+                              <label class="control-label">Church</label>
+                              <select id="principal_church" class="form-control">
                                 <option disabled="" selected=""></option>
                                 <option value="Africa Brotherhood Church"> Africa Brotherhood Church </option>
                                 <option value="Africa Christian Church and Schools"> Africa Christian Church and Schools </option>
@@ -191,283 +213,331 @@
                                 <option value="United Pentecostal Evangelistic Crusade">United Pentecostal Evangelistic Crusade</option>
                                 <option value="Zion Harvest Church">Zion Harvest Church</option>
                               </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">person</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">First Name</label>
-                                                        <input id="principal_fname" name="principal_fname" type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            <div class="form-group label-floating">
+                              <label class="control-label">First Name</label>
+                              <input
+                                id="principal_fname"
+                                name="principal_fname"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">person</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Last Name</label>
-                                                        <input id="principal_lname" name="principal_lname" type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Last Name</label>
+                              <input
+                                id="principal_lname"
+                                name="principal_lname"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">wc</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Gender</label>
-                                                        <select id="principal_gender" class="form-control">
+                            <div class="form-group label-floating">
+                              <label class="control-label">Gender</label>
+                              <select id="principal_gender" class="form-control">
                                 <option disabled="" selected=""></option>
                                 <option value="Male"> Male </option>
                                 <option value="Female"> Female </option>
                               </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">credit_card</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">ID Number</label>
-                                                        <input id="principal_id_no" name="principal_id_no" type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="form-group label-floating">
+                              <label class="control-label">ID Number</label>
+                              <input
+                                id="principal_id_no"
+                                name="principal_id_no"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">linear_scale</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">KRA Pin</label>
-                                                        <input id="principal_kra_pin" name="principal_kra_pin" type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            <div class="form-group label-floating">
+                              <label class="control-label">KRA Pin</label>
+                              <input
+                                id="principal_kra_pin"
+                                name="principal_kra_pin"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">event</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label" for="date">Date of Birth</label>
-                                                        <input class="form-control" id="principal_dob" name="date" placeholder="Date of Birth" type="text" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            <div class="form-group label-floating">
+                              <label class="control-label" for="date">Date of Birth</label>
+                              <input
+                                class="form-control"
+                                id="principal_dob"
+                                name="date"
+                                placeholder="Date of Birth"
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">phone</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Phone Number</label>
-                                                        <input id="principal_phone" name="principal_phone" type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            <div class="form-group label-floating">
+                              <label class="control-label">Phone Number</label>
+                              <input
+                                id="principal_phone"
+                                name="principal_phone"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                              <span class="input-group-addon">
                                 <i class="material-icons">email</i>
                               </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Email Address</label>
-                                                        <input id="principal_email" name="principal_email" type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                              <div class="form-group label-floating">
+                                <label class="control-label">Email Address</label>
+                                <input id="principal_email" name="principal_email" type="text" class="form-control" />
+                              </div>
+                            </div>
+                        </div>
+                      </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                      <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                              <span class="input-group-addon">
                                 <i class="material-icons">add_a_photo</i>
                               </span>
-                                                    <div class="form-group label-floating">
-                                                        <label for="Front ID upload">ID photo - Front</label>
-                                                        <input id="principal_ID_FRONT" name="principal_ID_FRONT" type="file" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
+                              <div class="form-group label-floating">
+                                <label for="Front ID upload">ID photo - Front</label>
+                                <input id="file" name="principal_ID_FRONT" type="file" class="form-control" />
+                              </div>
+                            </div>
+                        </div>
 
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">add_a_photo</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label for="Front ID upload">ID photo - Back</label>
-                                                        <input id="principal_ID_BACK" name="principal_ID_BACK" type="file" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div class="form-group label-floating">
+                              <label for="Front ID upload">ID photo - Back</label>
+                              <input id="file2" name="principal_ID_BACK" type="file" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
 
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">add_a_photo</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label for="Front ID upload">Passport Photo</label>
-                                                        <input id="principal_Photo" name="passport_Photo" type="file" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="checkbox" style="padding-left: 2rem;">
-                                                    Have you had any accidents recently?
-                                                    <label>
-                              <input id="cb_have_accidents" type="checkbox" checked name="optionsCheckboxes" />
+                            <div class="form-group label-floating">
+                              <label for="Front ID upload">Passport Photo</label>
+                              <input id="file3" name="passport_Photo" type="file" class="form-control" />
+                            </div>
+                          </div>
+                        </div>                                                             
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="checkbox" style="padding-left: 2rem;">
+                            Have you had any accidents recently?
+                            <label>
+                              <input id="accidents" type="checkbox" name="optionsCheckboxes"/>
+                            </label>                        
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12">
+                          <div class="form-group label-floating">
+                            <label class="control-label">Please give details including extent of injury</label>
+                            <textarea class="form-control" id="accidentsDesc" name="accident_Details" rows="2"></textarea>
+                          </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="checkbox" style="padding-left: 2rem;">
+                            Do you suffer from any physical defect or infirmity?
+                            <label>
+                              <input id="physicalDefectOrInfirmity" type="checkbox" name="cb_have_physical_defect" value="true"/>
                             </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">Please give details including extent of injury</label>
-                                                <textarea class="form-control" id="acccident_Details" name="accident_Details" rows="2"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="checkbox" style="padding-left: 2rem;">
-                                                    Do you suffer from any physical defect or infirmity?
-                                                    <label>
-                              <input id="cb_have_physical_defect" type="checkbox" name="cb_have_physical_defect" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12">
+                        <div class="form-group label-floating">
+                          <label class="control-label">Please give details</label>
+                          <textarea class="form-control" id="physicalDefectOrInfirmityDesc" name="physical_defect_Details" rows="2"></textarea>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="checkbox" style="padding-left: 2rem;">
+                            Do you suffer from any chronic illness? 
+                            <label>
+                              <input id="chronicIllness" type="checkbox" name="cb_have_chronic_illness" />
                             </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">Please give details</label>
-                                                <textarea class="form-control" id="physical_defect_Details" name="physical_defect_Details" rows="2"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="checkbox" style="padding-left: 2rem;">
-                                                    Do you suffer from any chronic illness?
-                                                    <label>
-                              <input id="cb_have_chronic_illness" type="checkbox" name="cb_have_chronic_illness" />
-                            </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">Please give details</label>
-                                                <textarea class="form-control" id="chronic_illness_Details" name="chronic_illness_Details" rows="2"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12">
+                        <div class="form-group label-floating">
+                          <label class="control-label">Please give details</label>
+                          <textarea class="form-control" id="chronicIllnessDesc" name="chronic_illness_Details" rows="2"></textarea>
+                        </div>
+                      </div>
+                    </div>
 
-                                    <div class="tab-pane" id="spouse">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <h4 class="info-text">
-                                                    Now enter your spouse details if any.
-                                                </h4>
-                                            </div>
-                                        </div>
+                    <div class="tab-pane" id="spouse">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h4 class="info-text">
+                            Now enter your spouse details if any.
+                          </h4>
+                        </div>
+                      </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="checkbox" style="padding-left: 2rem;">
-                                                    <label>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="checkbox" style="padding-left: 2rem;">
+                            <label>
                               <input
                                 id="cb_have_spouse"
                                 type="checkbox"
                                 checked
                                 name="optionsCheckboxes"
                               />
-                            </label> I have a spouse
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            </label>
+                            I have a spouse
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">person</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">First Name</label>
-                                                        <input id="spouse_fname" name="spouse_fname" type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            <div class="form-group label-floating">
+                              <label class="control-label">First Name</label>
+                              <input
+                                id="spouse_fname"
+                                name="spouse_fname"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">person</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Last Name</label>
-                                                        <input id="spouse_lname" name="spouse_lname" type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Last Name</label>
+                              <input
+                                id="spouse_lname"
+                                name="spouse_lname"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">wc</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Gender</label>
-                                                        <select id="spouse_gender" class="form-control">
+                            <div class="form-group label-floating">
+                              <label class="control-label">Gender</label>
+                              <select id="spouse_gender" class="form-control">
                                 <option disabled="" selected=""></option>
                                 <option value="Male"> Male </option>
                                 <option value="Female"> Female </option>
                               </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">credit_card</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">ID Number</label>
-                                                        <input id="spouse_id_no" name="spouse_id_no" type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="form-group label-floating">
+                              <label class="control-label">ID Number</label>
+                              <input
+                                id="spouse_id_no"
+                                name="spouse_id_no"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">event</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label" for="date">Date of Birth</label
+                            <div class="form-group label-floating">
+                              <label class="control-label" for="date"
+                                >Date of Birth</label
                               >
                               <input
                                 class="form-control"
@@ -486,74 +556,78 @@
                             </span>
                             <div class="form-group label-floating">
                               <label class="control-label">Phone Number</label>
-                                                        <input id="spouse_phone" name="spouse_phone" type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                              <input
+                                id="spouse_phone"
+                                name="spouse_phone"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">email</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Email Address</label>
-                                                        <input id="spouse_email" name="spouse_email" type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            <div class="form-group label-floating">
+                              <label class="control-label">Email Address</label>
+                              <input id="spouse_email" name="spouse_email" type="text" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">add_a_photo</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label for="Front ID upload">ID photo - Front</label>
-                                                        <input id="spouse_ID_FRONT" name="spouse_ID_FRONT" type="file" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div class="form-group label-floating">
+                              <label for="Front ID upload">ID photo - Front</label>
+                              <input id="file4" name="spouse_ID_FRONT" type="file" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
 
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">add_a_photo</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label for="Front ID upload">ID photo - Back</label>
-                                                        <input id="spouse_ID_BACK" name="spouse_ID_BACK" type="file" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div class="form-group label-floating">
+                              <label for="Front ID upload">ID photo - Back</label>
+                              <input id="file5" name="spouse_ID_BACK" type="file" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
 
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">add_a_photo</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label for="Front ID upload">Passport Photo</label>
-                                                        <input id="spouse_Photo" name="passport_Photo" type="file" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="form-group label-floating">
+                              <label for="Front ID upload">Passport Photo</label>
+                              <input id="file6" name="passport_Photo" type="file" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-                                    <div class="tab-pane" id="children">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <h4 class="info-text">
-                                                    Kindly provide details of your children if any.
-                                                </h4>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                    <div class="tab-pane" id="children">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h4 class="info-text">
+                            Kindly provide details of your children if any.
+                          </h4>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">child_friendly</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Number of Children</label
-                              >
+                            <div class="form-group label-floating">
+                              <label class="control-label">Number of Children</label>
                               <select id="sel_child_count" class="form-control">
                                 <option disabled="" selected=""></option>
                                 <option selected value="0"> None </option>
@@ -584,202 +658,259 @@
                             </span>
                             <div class="form-group label-floating">
                               <label class="control-label">First Name</label>
-                                                        <input id="kin_fname" name="kin_fname" type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                              <input
+                                id="kin_fname"
+                                name="kin_fname"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">person</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Last Name</label>
-                                                        <input id="kin_lname" name="kin_lname" type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            <div class="form-group label-floating">
+                              <label class="control-label">Last Name</label>
+                              <input
+                                id="kin_lname"
+                                name="kin_lname"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">wc</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Gender</label>
-                                                        <select id="kin_gender" class="form-control">
+                            <div class="form-group label-floating">
+                              <label class="control-label">Gender</label>
+                              <select id="kin_gender" class="form-control">
                                 <option disabled="" selected=""></option>
                                 <option value="Male"> Male </option>
                                 <option value="Female"> Female </option>
                               </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">event</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label" for="date">Date of Birth</label>
-                                                        <input class="form-control" id="kin_dob" name="date" placeholder="Date of Birth" type="text" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            <div class="form-group label-floating">
+                              <label class="control-label" for="date">Date of Birth</label>
+                              <input class="form-control" id="kin_dob" name="date" placeholder="Date of Birth" type="text" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">credit_card</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">ID Number</label>
-                                                        <input id="kin_id_no" name="kin_id_no" type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            <div class="form-group label-floating">
+                              <label class="control-label">ID Number</label>
+                              <input
+                                id="kin_id_no"
+                                name="kin_id_no"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">email</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Email Address</label>
-                                                        <input id="kin_email" name="kin_email" type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            <div class="form-group label-floating">
+                              <label class="control-label">Email Address</label>
+                              <input
+                                id="kin_email"
+                                name="kin_email"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">phone</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Phone Number</label>
-                                                        <input id="kin_phone" name="kin_phone" type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            <div class="form-group label-floating">
+                              <label class="control-label">Phone Number</label>
+                              <input
+                                id="kin_phone"
+                                name="kin_phone"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>                       
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">add_a_photo</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label for="Front ID upload">ID photo - Front</label>
-                                                        <input id="kin_ID_FRONT" name="principal_ID_FRONT" type="file" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            <div class="form-group label-floating">
+                              <label for="Front ID upload">ID photo - Front</label>
+                              <input id="file7" name="principal_ID_FRONT" type="file" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">add_a_photo</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label for="Front ID upload">ID photo - Back</label>
-                                                        <input id="kin_ID_BACK" name="principal_ID_BACK" type="file" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
+                            <div class="form-group label-floating">
+                              <label for="Front ID upload">ID photo - Back</label>
+                              <input id="file8" name="principal_ID_BACK" type="file" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">
                               <i class="material-icons">add_a_photo</i>
                             </span>
-                                                    <div class="form-group label-floating">
-                                                        <label for="Front ID upload">Passport Photo</label>
-                                                        <input id="kin_Photo" name="passport_Photo" type="file" class="form-control" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="form-group label-floating">
+                              <label for="Front ID upload">Passport Photo</label>
+                              <input id="file9" name="passport_Photo" type="file" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-                                    <div class="tab-pane" id="cover">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <h4 class="info-text">
-                                                    Select Cover Option
-                                                </h4>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <div class="input-group" id="cover-option">
-
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Cover Options</label>
-                                                        <select id="cover_options" class="form-control">
-                                <option selected value="3800 Ksh">
+                    <div class="tab-pane" id="cover">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h4 class="info-text">
+                            Select Cover Option
+                          </h4>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="input-group" id="cover-option">
+                           
+                            <div class="form-group label-floating">
+                              <label class="control-label">Cover Options</label>
+                              <select id="cover_options" class="form-control">
+                                <option selected value="OPTION_1">
                                   3,800 Ksh Per annum
                                 </option>
-                                <option value="5600 Ksh">
+                                <option value="OPTION_2">
                                   5,600 Ksh per annum
                                 </option>
-                                <option value="8500 Ksh">
+                                <option value="OPTION_3">
                                   8,500 Ksh per annum
                                 </option>
                               </select>
-                                                        <div style="margin-top: 4rem;" id="cover-result">
-                                                            <img src="assets/img/pangia-kesho.png">
-                                                            <p>
-                                                                <strong>NB:</strong> For every extra member the premium goes up Ksh 1,400 for option 1 and Ksh 2,000 for option 2 & 3.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="tab-pane" id="payment">
-                                        <h4 class="info-text">
-                                            Please select an option
-                                        </h4>
-                                        <div class="row">
-                                            <div class="col-sm-10 col-sm-offset-1">
-                                                <div class="col-sm-12">
-                                                    <div class="choice" id="mpesa" data-toggle="wizard-radio" rel="tooltip" title="Pay via Safaricom's M-Pesa.">
-                                                        <input id="mpesaPay" type="radio" name="payment" value="MPesa" />
-                                                        <div class="icon">
-                                                            <i class="material-icons">phone_android</i>
-                                                        </div>
-                                                        <h6>Pay now via M-Pesa</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div style="margin-top: 4rem;" class="row" id="pay-options"></div>
-                                    </div>
-                                </div>
-
-                                <div id="wizard-footer" class="wizard-footer">
-                                    <div class="pull-right">
-                                        <input type="button" class="btn btn-next btn-fill btn-danger btn-wd" name="next" value="Next" />
-                                        <input type="button" class="btn btn-finish btn-fill btn-danger btn-wd" id="finish" name="finish" value="Finish" />
-                                    </div>
-                                    <div class="pull-left">
-                                        <input type="button" class="btn btn-previous btn-fill btn-default btn-wd" name="previous" value="Previous" />
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </form>
+                              <div style="margin-top: 4rem;" id="cover-result">
+                                <img src="assets/img/pangia-kesho.png">
+                                <p>
+                                 <strong>NB:</strong> For every extra member the premium goes up Ksh 1,400 for option 1 and Ksh 2,000 for option 2 & 3.
+                                </p>                                                              
+                              </div>
+                            </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                    <!-- wizard container -->
-                </div>
-            </div>
-            <!-- row -->
-        </div>
-        <!--  big container -->
 
-        <div class="footer">
-            <div class="container text-center">
-                Powered by
-                <a href="https://bluewaveinsurance.co">Bluewave</a> in partnership with <a href="https://ke.britam.com/">Britam</a> and <a href="http://www.oaic.org/">OAIC</a>
+                    <div class="tab-pane" id="payment">
+                      <h4 class="info-text">
+                        Please select an option
+                      </h4>
+                      <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1">
+                          <div class="col-sm-12">
+                            <div
+                              class="choice"
+                              id="mpesa"
+                              data-toggle="wizard-radio"
+                              rel="tooltip"
+                              title="Pay via Safaricom's M-Pesa."
+                            >
+                              <input
+                                id="mpesaPay"
+                                type="radio"
+                                name="payment"
+                                value="MPesa"
+                              />
+                              <div class="icon">
+                                <i class="material-icons">phone_android</i>
+                              </div>
+                              <h6>Pay now via M-Pesa</h6>
+                            </div>
+                          </div>                
+                        </div>
+                      </div>
+                      <div
+                        style="margin-top: 4rem;"
+                        class="row"
+                        id="pay-options"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div id="wizard-footer" class="wizard-footer">
+                    <div class="pull-right">
+                      <input
+                        type="button"
+                        class="btn btn-next btn-fill btn-danger btn-wd"
+                        name="next"
+                        value="Next"
+                      />
+                      <input
+                        type="button"
+                        class="btn btn-finish btn-fill btn-danger btn-wd"
+                        id="finish"
+                        name="finish"
+                        value="Finish"
+                      />
+                    </div>
+                    <div class="pull-left">
+                      <input
+                        type="button"
+                        class="btn btn-previous btn-fill btn-default btn-wd"
+                        name="previous"
+                        value="Previous"
+                      />
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </form>
+              </div>
             </div>
+            <!-- wizard container -->
+          </div>
         </div>
+        <!-- row -->
+      </div>
+      <!--  big container -->
+
+      <div class="footer">
+        <div class="container text-center">
+          Powered by
+          <a href="https://bluewaveinsurance.co">Bluewave</a> in partnership
+          with <a href="https://ke.britam.com/">Britam</a> and <a href="http://www.oaic.org/">OAIC</a>
+        </div>
+      </div>
     </div>
 
     <!--   Core JS Files   -->
@@ -797,201 +928,227 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 
     <script>
-        $(document).ready(function() {
+      $(document).ready(function() {
 
-            setUpDatePicker = function() {
-                var date_input = $('input[name="date"]'); //our date input has the name "date"
-                var container =
-                    $(".bootstrap-iso form").length > 0 ?
-                    $(".bootstrap-iso form").parent() :
-                    "body";
-                var options = {
-                    format: "yyyy-mm-dd",
-                    container: container,
-                    todayHighlight: true,
-                    autoclose: true
-                };
-                date_input.datepicker(options);
+        setUpDatePicker = function() {
+          var date_input = $('input[name="date"]'); //our date input has the name "date"
+          var container =
+            $(".bootstrap-iso form").length > 0
+              ? $(".bootstrap-iso form").parent()
+              : "body";
+          var options = {
+            format: "yyyy-mm-dd",
+            container: container,
+            todayHighlight: true,
+            autoclose: true
+          };
+          date_input.datepicker(options);
+        };
+
+        const toBase64 = file => new Promise((resolve, reject) => {
+          if (file) {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = error => reject(error);
+          } else {
+            resolve(null)
+          }
+        });
+
+        checkout = function(amount, referenceId) {
+          fbq("track", "InitiateMpesaCheckout");
+
+          $("#pay").prop("disabled", true);
+          $("#pay").prop("value", "Working...");
+
+          const customerMobile = $("#mpesa-no").val();
+          $.ajax({
+            url:
+              "https://mbima.bluewaveinsurance.co:4434/api/mpesa/stk-push",
+            dataType: "json",
+            type: "post",
+            contentType: "application/json",
+            data: JSON.stringify({
+              amount,
+              customerMobile,
+              referenceId
+            }),
+            processData: false,
+            success: function(resp, textStatus, jQxhr) {
+              console.log(resp);
+              $("#pay").prop("disabled", false);
+              $("#pay").prop("value", "Pay");
+              location.reload();
+            },
+            error: function(jqXhr, textStatus, errorThrown) {
+              console.log(errorThrown);
+              $("#pay").prop("disabled", false);
+              $("#pay").prop("value", "Pay");
+            }
+          });
+        };
+
+        $("#mpesa").click(function() {
+          $("#pay-options").html("<p></p>");
+        });
+
+        $("#finish").click(async function() {
+          fbq("track", "SubmitApplication");
+
+          $("#finish").prop("disabled", true);
+          $("#finish").prop("value", "Saving...");
+
+          const f = $('#file')[0].files[0];
+          const f2 = $('#file2')[0].files[0];
+          const f3 = $('#file3')[0].files[0];
+          const f4 = $('#file4')[0].files[0];
+          const f5 = $('#file5')[0].files[0];
+          const f6 = $('#file6')[0].files[0];
+          const f7 = $('#file7')[0].files[0];
+          const f8 = $('#file8')[0].files[0];
+          const f9 = $('#file9')[0].files[0];
+
+          const numberOfChildren = parseInt($("#sel_child_count").val());
+          const children = [];
+
+          for (var i = 0; i < numberOfChildren; i++) {
+            const f10 = $("#child_" + (i + 1) + "_ID_PHOTO")[0].files[0];
+            const f11 = $('#child_' + (i + 1) + '_proof')[0].files[0];
+            children.push({
+              firstName: $("#child_" + (i + 1) + "_fname").val(),
+              lastName: $("#child_" + (i + 1) + "_lname").val(),
+              dateOfBirth: $("#child_" + (i + 1) + "_dob").val(),
+              gender: $("#child_" + (i + 1) + "_gender").val(),
+              birthCertOrIdNumber: $("#child_" + (i + 1) + "_ID").val(),
+              birthCertOrIdPhoto: await toBase64(f10),
+              proofOfSchooling: await toBase64(f11),
+              relationshipType: "CHILD",
+            });
+          }
+
+          const body = {
+            principal: {
+              mobileNumber: $("#principal_phone").val(),
+              firstName: $("#principal_fname").val(),
+              lastName: $("#principal_lname").val(),
+              dateOfBirth: $("#principal_dob").val(),
+              gender: $("#principal_gender").val(),
+              kraPinNo: $("#principal_kra_pin").val(),
+              idType: "NATIONAL_ID",
+              idNumber: $("#principal_id_no").val(),
+              email: $("#principal_email").val(),
+              church: $("#principal_church").val(),
+              idPhotoFront: await toBase64(f),
+              idPhotoBack: await toBase64(f2),
+              passportPhoto: await toBase64(f3),
+              accidents: $("#accidents").is(":checked"),
+              accidentsDesc: $("#accidentsDesc").val(),
+              physicalDefectOrInfirmity: $("#physicalDefectOrInfirmity").is(":checked"),
+              physicalDefectOrInfirmityDesc: $("#physicalDefectOrInfirmityDesc").val(),
+              chronicIllness: $("#chronicIllness").is(":checked"),
+              chronicIllnessDesc: $("chronicIllnessDesc").val(),
+              spousePresent: $("#cb_have_spouse").is(":checked"),
+              numberOfChildren,
+              selectedCoverPlan: $("#cover_options").val(),
+            },
+            children,
+            nextOfKin: {
+              mobileNumber: $("#kin_phone").val(),
+              firstName: $("#kin_fname").val(),
+              lastName: $("#kin_lname").val(),
+              dateOfBirth: $("#kin_dob").val(),
+              gender: $("#kin_gender").val(),
+              idNumber: $("#kin_id_no").val(),
+              email: $("#kin_email").val(),
+              idPhotoFront: await toBase64(f7),
+              idPhotoBack: await toBase64(f8),
+              passportPhoto: await toBase64(f9),
+            },
+          };
+
+          if (body.principal.spousePresent) {
+            body.spouse = {
+              mobileNumber: $("#spouse_phone").val(),
+              email: $("#spouse_email").val(),
+              firstName: $("#spouse_fname").val(),
+              lastName: $("#spouse_lname").val(),
+              dateOfBirth: $("#spouse_dob").val(),
+              gender: $("#spouse_gender").val(),
+              idPhotoFront: await toBase64(f4),
+              idPhotoBack: await toBase64(f5),
+              passportPhoto: await toBase64(f6),
+              idType: "NATIONAL_ID",
+              idNumber: $("#spouse_id_no").val(),
+              relationshipType: "SPOUSE",
             };
+          }
 
-            checkout = function(amount, referenceId) {
-                fbq("track", "InitiateMpesaCheckout");
+          $.ajax({
+            url:
+              "https://mbima.bluewaveinsurance.co:4434/api/policyholders",
+            dataType: "json",
+            type: "post",
+            contentType: "application/json",
+            data: JSON.stringify(body),
+            processData: false,
+            
+            success: function(ph, textStatus, jQxhr) {
+              $("#wizard-footer").remove();
+              if ($("#mpesaPay").attr("checked") === "checked") {
+                // var policyAmount =
+                //   body.principal.selectedCoverPlan === "COMPREHENSIVE"
+                //     ? 20000
+                //     : 15000;
+                // const extraMembers = ph.dependents.length + 1 - 5;
+                // if (extraMembers > 0) {
+                //   policyAmount += extraMembers * 6000;
+                // }
+               
+              } else {
+                //reload form
+                location.reload();
+              }
+            },
+            error: function(jqXhr, textStatus, errorThrown) {
+              $("#finish").prop("disabled", false);
+              $("#finish").prop("value", "Finish");
+              console.log(jqXhr);
+              const errorMsg =
+                (jqXhr.responseJSON && jqXhr.responseJSON.message) ||
+                "Error: Unable to complete enrolment";
+              alert(errorMsg);
+            }
+          });
+          console.log(body);
+        });
 
-                $("#pay").prop("disabled", true);
-                $("#pay").prop("value", "Working...");
+        // $("#cover_options").change(function() {
+        //   const option = $("#cover_options").val();
+        //   if (option === "COMPREHENSIVE") {
+        //     fbq("track", "SelectInpatientAndOutpatient");
 
-                const customerMobile = $("#mpesa-no").val();
-                $.ajax({
-                    url: "https://imarishaafya.bluewaveinsurance.co/api/mpesa/c2b/checkout",
-                    dataType: "json",
-                    type: "post",
-                    contentType: "application/json",
-                    data: JSON.stringify({
-                        amount,
-                        customerMobile,
-                        referenceId
-                    }),
-                    processData: false,
-                    success: function(resp, textStatus, jQxhr) {
-                        console.log(resp);
-                        $("#pay").prop("disabled", false);
-                        $("#pay").prop("value", "Pay");
-                        location.reload();
-                    },
-                    error: function(jqXhr, textStatus, errorThrown) {
-                        console.log(errorThrown);
-                        $("#pay").prop("disabled", false);
-                        $("#pay").prop("value", "Pay");
-                    }
-                });
-            };
+        //     $("#cover-result").html(
+        //       "KES 20,000 per year for a family of 5 or less.<br />Additional member (6th or more) KES 6,000 each per year"
+        //     );
+        //   } else {
+        //     fbq("track", "SelectOutpatientOnly");
 
-            $("#mpesa").click(function() {
-                $("#pay-options").html("<p></p>");
-            });
+        //     $("#cover-result").html(
+        //       "KES 15,000 per year for a family of 5 or less.<br />Additional member (6th or more) KES 6,000 each per year"
+        //     );
+        //   }
+        // });
 
-            $("#finish").click(function() {
-                fbq("track", "SubmitApplication");
+        $("#cb_have_spouse").change(function() {
+          $("#spouse :text").attr("disabled", !this.checked);
+          $("#spouse select").attr("disabled", !this.checked);
+        });
 
-                $("#finish").prop("disabled", true);
-                $("#finish").prop("value", "Saving...");
-
-                const numberOfChildren = parseInt($("#sel_child_count").val());
-                const children = [];
-
-                for (var i = 0; i < numberOfChildren; i++) {
-                    children.push({
-                        firstName: $("#child_" + (i + 1) + "_fname").val(),
-                        lastName: $("#child_" + (i + 1) + "_lname").val(),
-                        dateOfBirth: $("#child_" + (i + 1) + "_dob").val(),
-                        gender: $("#child_" + (i + 1) + "_gender").val(),
-                        ID: $("#child_" + (i + 1) + "_ID").val(),
-                        IDphoto: $("#child_" + (i + 1) + "_ID_PHOTO").val(),
-                        schoolingProof: $("#child_" + (i + 1) + "_proof_of_schooling").val(),
-                        relationshipType: "CHILD",
-                    });
-                }
-
-                const body = {
-                    principal: {
-                        mobileNumber: $("#principal_phone").val(),
-                        firstName: $("#principal_fname").val(),
-                        lastName: $("#principal_lname").val(),
-                        dateOfBirth: $("#principal_dob").val(),
-                        gender: $("#principal_gender").val(),
-                        kraPinNo: $("#principal_kra_pin").val(),
-                        idType: "NATIONAL_ID",
-                        idNumber: $("#principal_id_no").val(),
-                        email: $("#principal_email").val(),
-                        church: $("#principal_church").val(),
-                        frontID: $("#principal_ID_FRONT").val(),
-                        backID: $("#principal_ID_BACK").val(),
-                        passportPhoto: $("#principal_Photo").val(),
-                        spousePresent: $("#cb_have_spouse").is(":checked"),
-                        numberOfChildren,
-                        selectedCoverPlan: $("#cover_options").val(),
-                    },
-                    children,
-                    kin: {
-                        mobileNumber: $("#kin_phone").val(),
-                        firstName: $("#kin_fname").val(),
-                        lastName: $("#kin_lname").val(),
-                        dateOfBirth: $("#kin_dob").val(),
-                        gender: $("#kin_gender").val(),
-                        idNumber: $("#kin_id_no").val(),
-                        email: $("#kin_email").val(),
-                        frontID: $("#kin_ID_FRONT").val(),
-                        backID: $("#kin_ID_BACK").val(),
-                        passportPhoto: $("#kin_Photo").val(),
-                    },
-                };
-
-                if (body.principal.spousePresent) {
-                    body.spouse = {
-                        mobileNumber: $("#spouse_phone").val(),
-                        email: $("#spouse_email").val(),
-                        firstName: $("#spouse_fname").val(),
-                        lastName: $("#spouse_lname").val(),
-                        dateOfBirth: $("#spouse_dob").val(),
-                        gender: $("#spouse_gender").val(),
-                        frontID: $("#spouse_ID_FRONT").val(),
-                        backID: $("#spouse_ID_BACK").val(),
-                        passportPhoto: $("#spouse_Photo").val(),
-                        idType: "NATIONAL_ID",
-                        idNumber: $("#spouse_id_no").val(),
-                        relationshipType: "SPOUSE",
-                    };
-                }
-
-                // $.ajax({
-                //   url:
-                //     "https://imarishaafya.bluewaveinsurance.co/api/policy-holders/web-enrol",
-                //   dataType: "json",
-                //   type: "post",
-                //   contentType: "application/json",
-                //   data: JSON.stringify(body),
-                //   processData: false,
-                //   success: function(ph, textStatus, jQxhr) {
-                //     $("#wizard-footer").remove();
-                //     if ($("#mpesaPay").attr("checked") === "checked") {
-                //       var policyAmount =
-                //         body.principal.selectedCoverPlan === "COMPREHENSIVE"
-                //           ? 20000
-                //           : 15000;
-                //       const extraMembers = ph.dependents.length + 1 - 5;
-                //       if (extraMembers > 0) {
-                //         policyAmount += extraMembers * 6000;
-                //       }
-
-                //     } else {
-                //       //reload form
-                //       location.reload();
-                //     }
-                //   },
-                //   error: function(jqXhr, textStatus, errorThrown) {
-                //     $("#finish").prop("disabled", false);
-                //     $("#finish").prop("value", "Finish");
-                //     console.log(jqXhr);
-                //     const errorMsg =
-                //       (jqXhr.responseJSON && jqXhr.responseJSON.message) ||
-                //       "Error: Unable to complete enrolment";
-                //     alert(errorMsg);
-                //   }
-                // });
-                console.log(body);
-            });
-
-            $("#cover_options").change(function() {
-                const option = $("#cover_options").val();
-                if (option === "COMPREHENSIVE") {
-                    fbq("track", "SelectInpatientAndOutpatient");
-
-                    $("#cover-result").html(
-                        "KES 20,000 per year for a family of 5 or less.<br />Additional member (6th or more) KES 6,000 each per year"
-                    );
-                } else {
-                    fbq("track", "SelectOutpatientOnly");
-
-                    $("#cover-result").html(
-                        "KES 15,000 per year for a family of 5 or less.<br />Additional member (6th or more) KES 6,000 each per year"
-                    );
-                }
-            });
-
-            $("#cb_have_spouse").change(function() {
-                $("#spouse :text").attr("disabled", !this.checked);
-                $("#spouse select").attr("disabled", !this.checked);
-            });
-
-            $("#cb_have_accidents").change(function() {
-                $("#principal :textarea").attr("disabled", !this.checked);
-                $("#principal select").attr("disabled", !this.checked);
-            });
-
-            $("#sel_child_count").on("change", function() {
-                var html = "";
-                for (var i = 0; i < this.value; i++) {
-                    html += `
+        $("#sel_child_count").on("change", function() {
+          var html = "";
+          for (var i = 0; i < this.value; i++) {
+            html += `
           <div style="margin: 2rem;font-size:1.3rem;color:#0073bd;font-weight:250" class="col-sm-12">
               <p>Child #${i + 1}:</p>
             </div>
@@ -1100,36 +1257,35 @@
                 </span>
                 <div class="form-group label-floating">
                   <label for="proof of schooling upload">Proof of Schooling</label>
-                  <input id="child_${i + 1}_proof_of_schooling" name="proof_of_schooling" type="file" class="form-control" />
+                  <input id="child_${i + 1}_proof" name="proof_of_schooling" type="file" class="form-control" />
                 </div>
               </div>
             </div>
           `;
-                }
-                html += "</p>";
-                $("#row_children").html(html);
-                setUpDatePicker();
-            });
-
-            setUpDatePicker();
+          }
+          html += "</p>";
+          $("#row_children").html(html);
+          setUpDatePicker();
         });
+
+        setUpDatePicker();
+      });
     </script>
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
-        var Tawk_API = Tawk_API || {},
-            Tawk_LoadStart = new Date();
-        (function() {
-            var s1 = document.createElement("script"),
-                s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = "https://embed.tawk.to/5df9dfe243be710e1d229781/default";
-            s1.charset = "UTF-8";
-            s1.setAttribute("crossorigin", "*");
-            s0.parentNode.insertBefore(s1, s0);
-        })();
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function() {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/5df9dfe243be710e1d229781/default";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
     </script>
     <!--End of Tawk.to Script-->
-</body>
-
+  </body>
 </html>
