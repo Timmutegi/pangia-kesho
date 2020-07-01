@@ -147,7 +147,7 @@
                             </span>
                             <div class="form-group label-floating">
                               <label class="control-label">Church</label>
-                              <select id="principal_church" class="form-control">
+                              <select id="principal_church" class="form-control" required>
                                 <option disabled="" selected=""></option>
                                 <option value="Africa Brotherhood Church"> Africa Brotherhood Church </option>
                                 <option value="Africa Christian Church and Schools"> Africa Christian Church and Schools </option>
@@ -231,6 +231,7 @@
                                 name="principal_fname"
                                 type="text"
                                 class="form-control"
+                                required
                               />
                             </div>
                           </div>
@@ -1027,31 +1028,29 @@
             });
           }
 
-          const body = {
-            principal: {
-              mobileNumber: $("#principal_phone").val(),
-              firstName: $("#principal_fname").val(),
-              lastName: $("#principal_lname").val(),
-              dateOfBirth: $("#principal_dob").val(),
-              gender: $("#principal_gender").val(),
-              kraPinNo: $("#principal_kra_pin").val(),
-              idType: "NATIONAL_ID",
-              idNumber: $("#principal_id_no").val(),
-              email: $("#principal_email").val(),
-              church: $("#principal_church").val(),
-              idPhotoFront: await toBase64(f),
-              idPhotoBack: await toBase64(f2),
-              passportPhoto: await toBase64(f3),
-              accidents: $("#accidents").is(":checked"),
-              accidentsDesc: $("#accidentsDesc").val(),
-              physicalDefectOrInfirmity: $("#physicalDefectOrInfirmity").is(":checked"),
-              physicalDefectOrInfirmityDesc: $("#physicalDefectOrInfirmityDesc").val(),
-              chronicIllness: $("#chronicIllness").is(":checked"),
-              chronicIllnessDesc: $("chronicIllnessDesc").val(),
-              spousePresent: $("#cb_have_spouse").is(":checked"),
-              numberOfChildren,
-              selectedCoverPlan: $("#cover_options").val(),
-            },
+          const principal = {            
+            mobileNumber: $("#principal_phone").val(),
+            firstName: $("#principal_fname").val(),
+            lastName: $("#principal_lname").val(),
+            dateOfBirth: $("#principal_dob").val(),
+            gender: $("#principal_gender").val(),
+            kraPinNo: $("#principal_kra_pin").val(),
+            idType: "NATIONAL_ID",
+            idNumber: $("#principal_id_no").val(),
+            email: $("#principal_email").val(),
+            church: $("#principal_church").val(),
+            idPhotoFront: await toBase64(f),
+            idPhotoBack: await toBase64(f2),
+            passportPhoto: await toBase64(f3),
+            accidents: $("#accidents").is(":checked"),
+            accidentsDesc: $("#accidentsDesc").val(),
+            physicalDefectOrInfirmity: $("#physicalDefectOrInfirmity").is(":checked"),
+            physicalDefectOrInfirmityDesc: $("#physicalDefectOrInfirmityDesc").val(),
+            chronicIllness: $("#chronicIllness").is(":checked"),
+            chronicIllnessDesc: $("chronicIllnessDesc").val(),
+            spousePresent: $("#cb_have_spouse").is(":checked"),
+            numberOfChildren,
+            selectedCoverPlan: $("#cover_options").val(),
             children,
             nextOfKin: {
               mobileNumber: $("#kin_phone").val(),
@@ -1067,8 +1066,8 @@
             },
           };
 
-          if (body.principal.spousePresent) {
-            body.spouse = {
+          if (principal.spousePresent) {
+            principal.spouse = {
               mobileNumber: $("#spouse_phone").val(),
               email: $("#spouse_email").val(),
               firstName: $("#spouse_fname").val(),
@@ -1090,20 +1089,74 @@
             dataType: "json",
             type: "post",
             contentType: "application/json",
-            data: JSON.stringify(body),
+            data: JSON.stringify(principal),
             processData: false,
             
             success: function(ph, textStatus, jQxhr) {
               $("#wizard-footer").remove();
               if ($("#mpesaPay").attr("checked") === "checked") {
-                // var policyAmount =
-                //   body.principal.selectedCoverPlan === "COMPREHENSIVE"
-                //     ? 20000
-                //     : 15000;
-                // const extraMembers = ph.dependents.length + 1 - 5;
-                // if (extraMembers > 0) {
-                //   policyAmount += extraMembers * 6000;
-                // }
+                var policyAmount;
+                if (principal.selectedCoverPlan === "OPTION_1") {
+                  policyAmount = 3800
+                } else if (principal.selectedCoverPlan === "OPTION_2") {
+                  policyAmount = 5600
+                } else {
+                  policyAmount = 8500
+                }
+
+                $("#pay-options").html(
+                  `
+                  <div class="col-sm-5 text-right">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="material-icons">phone_android</i>
+                      </span>
+                      <div class="form-group label-floating">
+                        <label class="control-label"
+                          >M-Pesa Number for Payment</label
+                        >
+                        <input
+                          id="mpesa-no"
+                          name="mpesa-no"
+                          type="text"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                    <div class="pull-right">
+                      <input
+                        id="pay"
+                        type="button"
+                        class="btn btn-success"
+                        onclick="checkout('${policyAmount}', '${
+                        ph.policyNumber
+                        }')"
+                        name="pay"
+                        value="Pay"
+                      />
+                      </div>
+                  </div>
+                  <div class="col-sm-2 text-center">
+                    <div class="input-group">
+                      <span class="input-group-addon"> </span>
+                      <div class="form-group label-floating">
+                        <p>OR</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-5 text-left">
+                    <div class="input-group">
+                      <span class="input-group-addon"> </span>
+                      <div class="form-group label-floating">
+                        <h4>Pay via Lipa Na M-Pesa to:</h4>
+                        <p>Paybill: <b>831583</b></p>
+                        <p>Account: <b>${ph.policyNumber}</b></p>
+                        <p>Amount: <b>KES ${policyAmount.toLocaleString()}</b></p>
+                      </div>
+                    </div>
+                  </div>
+                `
+                );
                
               } else {
                 //reload form
@@ -1120,25 +1173,25 @@
               alert(errorMsg);
             }
           });
-          console.log(body);
+          console.log(principal);
         });
 
-        // $("#cover_options").change(function() {
-        //   const option = $("#cover_options").val();
-        //   if (option === "COMPREHENSIVE") {
-        //     fbq("track", "SelectInpatientAndOutpatient");
+        $("#cover_options").change(function() {
+          const option = $("#cover_options").val();
+          if (option === "COMPREHENSIVE") {
+            fbq("track", "SelectInpatientAndOutpatient");
 
-        //     $("#cover-result").html(
-        //       "KES 20,000 per year for a family of 5 or less.<br />Additional member (6th or more) KES 6,000 each per year"
-        //     );
-        //   } else {
-        //     fbq("track", "SelectOutpatientOnly");
+            $("#cover-result").html(
+              "KES 20,000 per year for a family of 5 or less.<br />Additional member (6th or more) KES 6,000 each per year"
+            );
+          } else {
+            fbq("track", "SelectOutpatientOnly");
 
-        //     $("#cover-result").html(
-        //       "KES 15,000 per year for a family of 5 or less.<br />Additional member (6th or more) KES 6,000 each per year"
-        //     );
-        //   }
-        // });
+            $("#cover-result").html(
+              "KES 15,000 per year for a family of 5 or less.<br />Additional member (6th or more) KES 6,000 each per year"
+            );
+          }
+        });
 
         $("#cb_have_spouse").change(function() {
           $("#spouse :text").attr("disabled", !this.checked);
