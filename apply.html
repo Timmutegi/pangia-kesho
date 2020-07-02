@@ -57,10 +57,8 @@
 
 <body>
   <div class="image-container set-full-height" style="background-image: url('img/african-family.jpg')">
-    <a href="./index.html">
-      <img style="max-height: 72px;left: 50px;
-        position: absolute;
-        top: 15px;" src="img/OAIC.png" />
+    <a href="./index.html" class="btn btn-info" style="margin-left: 20px;margin-top: 30px;">
+      <i class="material-icons">keyboard_backspace</i> Back Home
     </a>
     <!--   Big container   -->
     <div class="container">
@@ -223,7 +221,8 @@
                           </span>
                           <div class="form-group label-floating">
                             <label class="control-label">Last Name</label>
-                            <input id="principal_lname" name="principal_lname" type="text" class="form-control" required/>
+                            <input id="principal_lname" name="principal_lname" type="text" class="form-control"
+                              required />
                           </div>
                         </div>
                       </div>
@@ -251,7 +250,8 @@
                           </span>
                           <div class="form-group label-floating">
                             <label class="control-label">ID Number</label>
-                            <input id="principal_id_no" name="principal_id_no" type="text" class="form-control" required/>
+                            <input id="principal_id_no" name="principal_id_no" type="text" class="form-control"
+                              required />
                           </div>
                         </div>
                       </div>
@@ -264,7 +264,8 @@
                           </span>
                           <div class="form-group label-floating">
                             <label class="control-label">KRA Pin</label>
-                            <input id="principal_kra_pin" name="principal_kra_pin" type="text" class="form-control" required/>
+                            <input id="principal_kra_pin" name="principal_kra_pin" type="text" class="form-control"
+                              required />
                           </div>
                         </div>
                       </div>
@@ -276,7 +277,7 @@
                           <div class="form-group label-floating">
                             <label class="control-label" for="date">Date of Birth</label>
                             <input class="form-control" id="principal_dob" name="date" placeholder="Date of Birth"
-                              type="text" required/>
+                              type="text" required />
                           </div>
                         </div>
                       </div>
@@ -287,7 +288,8 @@
                           </span>
                           <div class="form-group label-floating">
                             <label class="control-label">Phone Number</label>
-                            <input id="principal_phone" name="principal_phone" type="text" class="form-control" required/>
+                            <input id="principal_phone" name="principal_phone" type="text" class="form-control"
+                              required />
                           </div>
                         </div>
                       </div>
@@ -298,7 +300,8 @@
                           </span>
                           <div class="form-group label-floating">
                             <label class="control-label">Email Address</label>
-                            <input id="principal_email" name="principal_email" type="text" class="form-control" required/>
+                            <input id="principal_email" name="principal_email" type="text" class="form-control"
+                              required />
                           </div>
                         </div>
                       </div>
@@ -311,7 +314,7 @@
                           </span>
                           <div class="form-group label-floating">
                             <label for="Front ID upload">ID photo - Front</label>
-                            <input id="file" name="principal_ID_FRONT" type="file" class="form-control"/>
+                            <input id="file" name="principal_ID_FRONT" type="file" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -322,7 +325,7 @@
                           </span>
                           <div class="form-group label-floating">
                             <label for="Front ID upload">ID photo - Back</label>
-                            <input id="file2" name="principal_ID_BACK" type="file" class="form-control"/>
+                            <input id="file2" name="principal_ID_BACK" type="file" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -333,7 +336,7 @@
                           </span>
                           <div class="form-group label-floating">
                             <label for="Front ID upload">Passport Photo</label>
-                            <input id="file3" name="passport_Photo" type="file" class="form-control"/>
+                            <input id="file3" name="passport_Photo" type="file" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -344,7 +347,7 @@
                         <div class="checkbox" style="padding-left: 2rem;">
                           Have you had any accidents recently?
                           <label>
-                            <input id="accidents" type="checkbox" name="optionsCheckboxes"/>
+                            <input id="accidents" type="checkbox" name="optionsCheckboxes" />
                           </label>
                         </div>
                       </div>
@@ -866,29 +869,29 @@
         }
         $("#pay-options").html(
           `
-          <div class="col-sm-6">
-            <div class="input-group">
-              <span class="input-group-addon"> </span>
-              <div class="form-group label-floating">
-                <h4>Pay via Lipa Na M-Pesa to:</h4>
-                <p>Paybill: <b></b></p>
-                <p>Account: <b>${ID}</b></p>
-                <p>Amount: <b>KES ${policyAmount.toLocaleString()}</b></p>
-              </div>
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon"> </span>
+            <div class="form-group label-floating">
+              <h4>Pay via Lipa Na M-Pesa to:</h4>
+              <p>Paybill: <b></b></p>
+              <p>Account: <b>${ID}</b></p>
+              <p>Amount: <b>KES ${policyAmount.toLocaleString()}</b></p>
             </div>
           </div>
-          <div class="col-sm-6">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <i class="material-icons">phone_android</i>
-              </span>
-              <div class="form-group label-floating">
-                <label class="control-label">Mpesa Transaction code</label>
-                <input id="mpesa_code" name="mpesa_code" type="text" class="form-control" required />
-              </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="material-icons">phone_android</i>
+            </span>
+            <div class="form-group label-floating">
+              <label class="control-label">Mpesa Transaction code</label>
+              <input id="mpesa_code" name="mpesa_code" type="text" class="form-control" required />
             </div>
           </div>
-        `
+        </div>
+      `
         );
       });
 
@@ -990,7 +993,7 @@
           success: function (ph, textStatus, jQxhr) {
             $("#wizard-footer").remove();
             alert('successful');
-            // location.reload();
+            location.reload();
 
           },
           error: function (jqXhr, textStatus, errorThrown) {
@@ -1015,119 +1018,119 @@
         var html = "";
         for (var i = 0; i < this.value; i++) {
           html += `
-         <div style="margin: 2rem;font-size:1.3rem;color:#0073bd;font-weight:250" class="col-sm-12">
-             <p>Child #${i + 1}:</p>
+       <div style="margin: 2rem;font-size:1.3rem;color:#0073bd;font-weight:250" class="col-sm-12">
+           <p>Child #${i + 1}:</p>
+         </div>
+         <div class="col-sm-6">
+           <div class="input-group">
+             <span class="input-group-addon">
+               <i class="material-icons">person</i>
+             </span>
+             <div class="form-group label-floating">
+               <label class="control-label">First Name</label>
+               <input
+                 id="child_${i + 1}_fname"
+                 name="child_${i + 1}_fname"
+                 type="text"
+                 class="form-control"
+               />
+             </div>
            </div>
-           <div class="col-sm-6">
+         </div>
+      
+         <div class="col-sm-6">
              <div class="input-group">
                <span class="input-group-addon">
                  <i class="material-icons">person</i>
                </span>
                <div class="form-group label-floating">
-                 <label class="control-label">First Name</label>
+                 <label class="control-label">Last Name</label>
                  <input
-                   id="child_${i + 1}_fname"
-                   name="child_${i + 1}_fname"
+                   id="child_${i + 1}_lname"
+                   name="child_${i + 1}_lname"
                    type="text"
                    class="form-control"
                  />
                </div>
              </div>
            </div>
-       
-           <div class="col-sm-6">
-               <div class="input-group">
-                 <span class="input-group-addon">
-                   <i class="material-icons">person</i>
-                 </span>
-                 <div class="form-group label-floating">
-                   <label class="control-label">Last Name</label>
-                   <input
-                     id="child_${i + 1}_lname"
-                     name="child_${i + 1}_lname"
-                     type="text"
-                     class="form-control"
-                   />
-                 </div>
-               </div>
+         </div>
+                   
+         <div class="col-sm-6">
+           <div class="input-group">
+             <span class="input-group-addon">
+               <i class="material-icons">wc</i>
+             </span>
+             <div class="form-group label-floating">
+               <label class="control-label">Gender</label>
+               <select id="child_${i + 1}_gender" class="form-control">
+                 <option disabled="" selected=""></option>
+                 <option value="Male"> Male </option>
+                 <option value="Female"> Female </option>
+               </select>
              </div>
            </div>
-                     
-           <div class="col-sm-6">
-             <div class="input-group">
-               <span class="input-group-addon">
-                 <i class="material-icons">wc</i>
-               </span>
-               <div class="form-group label-floating">
-                 <label class="control-label">Gender</label>
-                 <select id="child_${i + 1}_gender" class="form-control">
-                   <option disabled="" selected=""></option>
-                   <option value="Male"> Male </option>
-                   <option value="Female"> Female </option>
-                 </select>
-               </div>
+         </div>
+      
+         <div class="col-sm-6">
+           <div class="input-group">
+             <span class="input-group-addon">
+               <i class="material-icons">event</i>
+             </span>
+             <div class="form-group label-floating">
+               <label class="control-label" for="date">Date of Birth</label>
+               <input
+                 class="form-control"
+                 id="child_${i + 1}_dob"
+                 name="date"
+                 placeholder="Date of Birth"
+                 type="text"
+               />
              </div>
            </div>
-       
-           <div class="col-sm-6">
-             <div class="input-group">
-               <span class="input-group-addon">
-                 <i class="material-icons">event</i>
-               </span>
-               <div class="form-group label-floating">
-                 <label class="control-label" for="date">Date of Birth</label>
-                 <input
-                   class="form-control"
-                   id="child_${i + 1}_dob"
-                   name="date"
-                   placeholder="Date of Birth"
-                   type="text"
-                 />
-               </div>
+         </div>
+      
+         <div class="col-sm-6">
+           <div class="input-group">
+             <span class="input-group-addon">
+               <i class="material-icons">credit_card</i>
+             </span>
+             <div class="form-group label-floating">
+               <label class="control-label">Birth Certificate or ID Number</label>
+               <input
+                 id="child_${i + 1}_ID"
+                 name="child_id"
+                 type="text"
+                 class="form-control"
+               />
              </div>
            </div>
-       
-           <div class="col-sm-6">
-             <div class="input-group">
-               <span class="input-group-addon">
-                 <i class="material-icons">credit_card</i>
-               </span>
-               <div class="form-group label-floating">
-                 <label class="control-label">Birth Certificate or ID Number</label>
-                 <input
-                   id="child_${i + 1}_ID"
-                   name="child_id"
-                   type="text"
-                   class="form-control"
-                 />
-               </div>
+         </div>
+      
+         <div class="col-sm-6">
+           <div class="input-group">
+             <span class="input-group-addon">
+               <i class="material-icons">add_a_photo</i>
+             </span>
+             <div class="form-group label-floating">
+               <label for="Birth certificate or ID upload">Birth certificate or ID photo</label>
+               <input id="child_${i + 1}_ID_PHOTO" name="child_ID_photo" type="file" class="form-control" />
              </div>
            </div>
-       
-           <div class="col-sm-6">
-             <div class="input-group">
-               <span class="input-group-addon">
-                 <i class="material-icons">add_a_photo</i>
-               </span>
-               <div class="form-group label-floating">
-                 <label for="Birth certificate or ID upload">Birth certificate or ID photo</label>
-                 <input id="child_${i + 1}_ID_PHOTO" name="child_ID_photo" type="file" class="form-control" />
-               </div>
+         </div>
+      
+         <div class="col-sm-6">
+           <div class="input-group">
+             <span class="input-group-addon">
+               <i class="material-icons">add_a_photo</i>
+             </span>
+             <div class="form-group label-floating">
+               <label for="proof of schooling upload">Proof of Schooling</label>
+               <input id="child_${i + 1}_proof" name="proof_of_schooling" type="file" class="form-control" />
              </div>
            </div>
-       
-           <div class="col-sm-6">
-             <div class="input-group">
-               <span class="input-group-addon">
-                 <i class="material-icons">add_a_photo</i>
-               </span>
-               <div class="form-group label-floating">
-                 <label for="proof of schooling upload">Proof of Schooling</label>
-                 <input id="child_${i + 1}_proof" name="proof_of_schooling" type="file" class="form-control" />
-               </div>
-             </div>
-           </div>
-         `;
+         </div>
+       `;
         }
         html += "</p>";
         $("#row_children").html(html);
