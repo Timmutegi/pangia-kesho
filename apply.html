@@ -75,7 +75,7 @@
                   </h3>
                   <h5>This information will let us know more about you.</h5>
                 </div>
-                <div class="wizard-navigation">
+                <div class="wizard-navigation" id="navigation">
                   <ul>
                     <li>
                       <a href="#principal" data-toggle="tab">Principal</a>
@@ -279,6 +279,7 @@
                             <input class="form-control" id="principal_dob" name="date" placeholder="Date of Birth"
                               type="text" required />
                           </div>
+                          <p class="text-danger text-center" id="principal_limit" style="width: 80%;"></p>
                         </div>
                       </div>
                       <div class="col-sm-6">
@@ -377,7 +378,7 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-sm-12">
+                      <div class="col-sm-12" id="chronic">
                         <div class="checkbox" style="padding-left: 2rem;">
                           Do you suffer from any chronic illness?
                           <label>
@@ -473,6 +474,7 @@
                               type="text" required/>
                           </div>
                         </div>
+                          <p class="text-danger text-center" id="spouse_limit" style="width: 80%;"></p>
                       </div>
                       <div class="col-sm-6">
                         <div class="input-group">
@@ -740,7 +742,7 @@
                 </div>
                 <div id="wizard-footer" class="wizard-footer">
                   <div class="pull-right">
-                    <input type="button" class="btn btn-next btn-fill btn-danger btn-wd" name="next" value="Next" />
+                    <input type="button" class="btn btn-next btn-fill btn-danger btn-wd" id="next" name="next" value="Next" />
                     <input type="button" class="btn btn-finish btn-fill btn-danger btn-wd" id="finish" name="finish"
                       value="Finish" />
                   </div>
@@ -839,7 +841,6 @@
         });
       };
 
-
       $("#mpesa").click(function () {
         let policyAmount;
         let spouse = 0;
@@ -874,7 +875,7 @@
             <div class="form-group label-floating">
               <h4>Pay via Lipa Na M-Pesa to:</h4>
               <p>Paybill: <b>584065</b></p>
-              <p>Account: <b>${ID}</b></p>
+              <p>Account: <b>BW${ID}</b></p>
               <p>Amount: <b>KES ${policyAmount.toLocaleString()}</b></p>
             </div>
           </div>
@@ -890,9 +891,9 @@
             </div>
             <p id="code"></>
           </div>
-          <div id="progress"></div>
-          <div id="loading">Loading</div>
-          <div id="data"></div>
+          <div id="progress">
+            <p class=text-center id="percent"></p>      
+          </div>
         </div>
       `
         );
@@ -991,9 +992,6 @@
             };
           }
 
-          var progress = $('#progress');
-          $("#loading").hide();
-
           $.ajax({
             url: "https://mbima.bluewaveinsurance.co:4434/api/policyholders",
             dataType: "json",
@@ -1002,27 +1000,32 @@
             data: JSON.stringify(principal),
             processData: false,
 
-            // xhr: function () {
-            //   xhr.addEventListener("progress", function (evt) {
-            //     console.log(evt.lengthComputable); // false
-            //     if (evt.lengthComputable) {
-            //       var percentComplete = evt.loaded / evt.total;
-            //       progressElem.html(Math.round(percentComplete * 100) + "%");
-            //     }
-            //   }, false);
-            //   return xhr;              
-            // },
-            // beforeSend: function () {
-            //   $('#loading').show();
-            // },
-            // complete: function () {
-            //   $("#loading").hide();
-            // },
+            xhr: function () {
+              var xhr = new window.XMLHttpRequest();
+              // Handle progress
+              //Upload progress
+              const percent = $("#percent");
+              xhr.upload.addEventListener("progress", function (evt) {
+                if (evt.lengthComputable) {
+                  var percentComplete = evt.loaded / evt.total;
+                  percentComplete = parseInt(percentComplete * 100);
+                  percent.html(`Progress: ${percentComplete}%`);
+                  //Do something with upload progress
+                  console.log(percentComplete);
+                }
+              }, false);
+              return xhr;
+            },
+
             success: function (ph, textStatus, jQxhr) {
               $("#wizard-footer").remove();
-              $("#data").html("data receieved");
-              // alert('successful');
-              location.reload();
+              $("#progress").html(
+                ` <div class="alert alert-success" role="alert">
+                  <p class= text-center>UPLOAD SUCCESSFUL</p>
+                  </div>              
+                  `
+            )
+
             },
             error: function (jqXhr, textStatus, errorThrown) {
               $("#finish").prop("disabled", false);
@@ -1042,6 +1045,47 @@
         $("#spouse :text").attr("disabled", !this.checked);
         $("#spouse select").attr("disabled", !this.checked);
         $("#spouse :file").attr("disabled", !this.checked);
+      });
+
+      $("#principal_dob").change(function () {
+        const dob = new Date($("#principal_dob").val());
+        const age = new Number((new Date().getTime() - dob.getTime()) / 31536000000).toFixed(0) - 1;
+        if (age > 65) {
+          $("#principal_limit").html("Your age is above the limit allowed for this product. Kindly contact 0711 082 228 to get the Milele product.");
+          $("#next").prop("disabled", true);
+          $("#navigation").hide();
+        } else {
+          $("#principal_limit").html("");
+          $("#next").prop("disabled", false);
+          $("#navigation").show();
+        }
+      }); 
+ 
+      $(".child").change(function () {
+        const dob = new Date($(".child").val());
+        const age = new Number((new Date().getTime() - dob.getTime()) / 31536000000).toFixed(0) - 1;
+        console.log(dob);
+        // if (age > 25) {
+        //   $("#child_${i + 1}_limit").html("The age of your child has to be 25 years or below.");
+        //   $("#next").prop("disabled", true);
+        // } else {
+        //   $("#child_${i + 1}_limit").html("");
+        //   $("#next").prop("disabled", false);
+        // }
+      });
+        
+
+      $("#spouse_dob").change(function () {
+        const dob = new Date($("#spouse_dob").val());
+        const age = new Number((new Date().getTime() - dob.getTime()) / 31536000000).toFixed(0) - 1;
+        console.log(age);
+        if (age > 65) {
+          $("#spouse_limit").html("The age of your spouse has to be 65 years or below.");
+          $("#next").prop("disabled", true);
+        } else {
+          $("#spouse_limit").html("");
+          $("#next").prop("disabled", false);
+        }
       });
 
       $("#sel_child_count").on("change", function () {
@@ -1110,7 +1154,7 @@
              <div class="form-group label-floating">
                <label class="control-label" for="date">Date of Birth</label>
                <input
-                 class="form-control"
+                 class="form-control child"
                  id="child_${i + 1}_dob"
                  name="date"
                  placeholder="Date of Birth"
@@ -1118,6 +1162,7 @@
                />
              </div>
            </div>
+           <p class="text-danger text-center" id="child_${i + 1}_limit"></P>
          </div>
       
          <div class="col-sm-6">
