@@ -122,6 +122,16 @@ address {
     line-height: inherit;
 }
 
+#table th {
+    color: white;
+    font-size: 14px;
+}
+
+#table td {
+    color: white;
+    font-size: 14px;
+}
+
 ol,
 ul,
 dl {
