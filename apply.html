@@ -869,13 +869,13 @@
         }
         $("#pay-options").html(
           `
-        <div class="col-sm-6">
+        <div class="col-sm-6 text-center">
           <div class="input-group">
             <span class="input-group-addon"> </span>
             <div class="form-group label-floating">
               <h4>Pay via Lipa Na M-Pesa to:</h4>
               <p>Paybill: <b>584065</b></p>
-              <p>Account: <b>BW${ID}</b></p>
+              <p>Account: <b>PK${ID}</b></p>
               <p>Amount: <b>KES ${policyAmount.toLocaleString()}</b></p>
             </div>
           </div>
@@ -1061,8 +1061,8 @@
         }
       }); 
  
-      $(".child").change(function () {
-        const dob = new Date($(".child").val());
+      $(".try").change(function () {
+        const dob = new Date($(".try").val());
         const age = new Number((new Date().getTime() - dob.getTime()) / 31536000000).toFixed(0) - 1;
         console.log(dob);
         // if (age > 25) {
@@ -1094,6 +1094,7 @@
           html += `
        <div style="margin: 2rem;font-size:1.3rem;color:#0073bd;font-weight:250" class="col-sm-12">
            <p>Child #${i + 1}:</p>
+            <p style="font-size:13px;">Minimum Entry Age - 1 month, Maximum Entry Age - 18 years, Maximum Coverage Age 18 years - 25 years for fulltime students.</p>           
          </div>
          <div class="col-sm-6">
            <div class="input-group">
@@ -1154,7 +1155,7 @@
              <div class="form-group label-floating">
                <label class="control-label" for="date">Date of Birth</label>
                <input
-                 class="form-control child"
+                 class="form-control try"
                  id="child_${i + 1}_dob"
                  name="date"
                  placeholder="Date of Birth"
