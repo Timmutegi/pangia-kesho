@@ -700,13 +700,13 @@
                             <label class="control-label">Cover Options</label>
                             <select id="cover_options" class="form-control">
                               <option selected value="OPTION_1">
-                                3,800 Ksh Per annum
+                                3,900 Ksh Per annum
                               </option>
                               <option value="OPTION_2">
-                                5,600 Ksh per annum
+                                5,700 Ksh per annum
                               </option>
                               <option value="OPTION_3">
-                                8,500 Ksh per annum
+                                8,600 Ksh per annum
                               </option>
                             </select>
                             <div style="margin-top: 4rem;" id="cover-result">
@@ -763,9 +763,8 @@
     <!--  big container -->
     <div class="footer">
       <div class="container text-center">
-        Powered by
-        <a href="https://bluewaveinsurance.co">Bluewave</a> in partnership with <a
-          href="https://ke.britam.com/">Britam</a> and <a href="http://www.oaic.org/">OAIC</a>
+        The <a href="http://www.oaic.org/">OAIC</a> Pangia Kesho Initiative is arranged by Africa Social Financing Centre, powered by
+        <a href="https://bluewaveinsurance.co">Bluewave Insurance Agency</a> and underwritten by <a href="https://ke.britam.com/">Britam Insurance.</a>
       </div>
     </div>
   </div>
@@ -852,17 +851,17 @@
         const extraMembers = children + spouse;
 
         if ($("#cover_options").val() === "OPTION_1") {
-          policyAmount = 3800;
+          policyAmount = 3900;
           if (extraMembers > 0) {
             policyAmount += extraMembers * 1400;
           }
         } else if ($("#cover_options").val() === "OPTION_2") {
-          policyAmount = 5600;
+          policyAmount = 5700;
           if (extraMembers > 0) {
             policyAmount += extraMembers * 2000;
           }
         } else {
-          policyAmount = 8500;
+          policyAmount = 8600;
           if (extraMembers > 0) {
             policyAmount += extraMembers * 2000;
           }
@@ -1049,7 +1048,8 @@
 
       $("#principal_dob").change(function () {
         const dob = new Date($("#principal_dob").val());
-        const age = new Number((new Date().getTime() - dob.getTime()) / 31536000000).toFixed(0) - 1;
+        const age = new Number((new Date().getTime() - dob.getTime()) / 31536000000).toFixed(0);
+        console.log(age);
         if (age > 65) {
           $("#principal_limit").html("Your age is above the limit allowed for this product. Kindly contact 0711 082 228 to get the Milele product.");
           $("#next").prop("disabled", true);
