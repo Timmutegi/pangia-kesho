@@ -1064,7 +1064,6 @@
       $(".try").change(function () {
         const dob = new Date($(".try").val());
         const age = new Number((new Date().getTime() - dob.getTime()) / 31536000000).toFixed(0) - 1;
-        console.log(dob);
         // if (age > 25) {
         //   $("#child_${i + 1}_limit").html("The age of your child has to be 25 years or below.");
         //   $("#next").prop("disabled", true);
